@@ -1,0 +1,82 @@
+[0.000000] (-) TimerEvent: {}
+[0.002003] (mypkg) JobQueued: {'identifier': 'mypkg', 'dependencies': OrderedDict()}
+[0.002038] (mypkg) JobStarted: {'identifier': 'mypkg'}
+[0.010714] (mypkg) JobProgress: {'identifier': 'mypkg', 'progress': 'cmake'}
+[0.011198] (mypkg) JobProgress: {'identifier': 'mypkg', 'progress': 'build'}
+[0.011921] (mypkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/hiromasa/ros2_ws/build/mypkg', '--', '-j8', '-l8'], 'cwd': '/home/hiromasa/ros2_ws/build/mypkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ja:en'), ('USER', 'hiromasa'), ('LC_TIME', 'ja_JP.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/hiromasa'), ('OLDPWD', '/home/hiromasa'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('SYSTEMD_EXEC_PID', '1876'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/hiromasa/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'hiromasa'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hiromasa'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hiromasa-CFSV9-1:@/tmp/.ICE-unix/1656,unix/hiromasa-CFSV9-1:/tmp/.ICE-unix/1656'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/615ab4b0_5c5e_4469_a1e2_6da9cbb23fba'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.35KHB2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.107'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/hiromasa/ros2_ws/install/mypkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hiromasa/ros2_ws/build/mypkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/hiromasa/ros2_ws/install/mypkg:/opt/ros/humble')]), 'shell': False}
+[0.051658] (mypkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target mypkg\x1b[0m\n'}
+[0.067476] (mypkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/mypkg.dir/src/mypkg.cpp.o\x1b[0m\n'}
+[0.099828] (-) TimerEvent: {}
+[0.200163] (-) TimerEvent: {}
+[0.300503] (-) TimerEvent: {}
+[0.400841] (-) TimerEvent: {}
+[0.501184] (-) TimerEvent: {}
+[0.601529] (-) TimerEvent: {}
+[0.701857] (-) TimerEvent: {}
+[0.802200] (-) TimerEvent: {}
+[0.902606] (-) TimerEvent: {}
+[1.003014] (-) TimerEvent: {}
+[1.103406] (-) TimerEvent: {}
+[1.203708] (-) TimerEvent: {}
+[1.304090] (-) TimerEvent: {}
+[1.404390] (-) TimerEvent: {}
+[1.504691] (-) TimerEvent: {}
+[1.605079] (-) TimerEvent: {}
+[1.705453] (-) TimerEvent: {}
+[1.806037] (-) TimerEvent: {}
+[1.906428] (-) TimerEvent: {}
+[2.006793] (-) TimerEvent: {}
+[2.107178] (-) TimerEvent: {}
+[2.207563] (-) TimerEvent: {}
+[2.307957] (-) TimerEvent: {}
+[2.408339] (-) TimerEvent: {}
+[2.508738] (-) TimerEvent: {}
+[2.609058] (-) TimerEvent: {}
+[2.709418] (-) TimerEvent: {}
+[2.809773] (-) TimerEvent: {}
+[2.910131] (-) TimerEvent: {}
+[3.010480] (-) TimerEvent: {}
+[3.110842] (-) TimerEvent: {}
+[3.211200] (-) TimerEvent: {}
+[3.311645] (-) TimerEvent: {}
+[3.412003] (-) TimerEvent: {}
+[3.512362] (-) TimerEvent: {}
+[3.612689] (-) TimerEvent: {}
+[3.713057] (-) TimerEvent: {}
+[3.813431] (-) TimerEvent: {}
+[3.913821] (-) TimerEvent: {}
+[4.014161] (-) TimerEvent: {}
+[4.114517] (-) TimerEvent: {}
+[4.214854] (-) TimerEvent: {}
+[4.315434] (-) TimerEvent: {}
+[4.320240] (mypkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable mypkg\x1b[0m\n'}
+[4.415578] (-) TimerEvent: {}
+[4.515965] (-) TimerEvent: {}
+[4.616331] (-) TimerEvent: {}
+[4.716719] (-) TimerEvent: {}
+[4.795297] (mypkg) StdoutLine: {'line': b'[100%] Built target mypkg\n'}
+[4.807005] (mypkg) CommandEnded: {'returncode': 0}
+[4.816848] (-) TimerEvent: {}
+[4.832850] (mypkg) JobProgress: {'identifier': 'mypkg', 'progress': 'install'}
+[4.843038] (mypkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/hiromasa/ros2_ws/build/mypkg'], 'cwd': '/home/hiromasa/ros2_ws/build/mypkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'ja:en'), ('USER', 'hiromasa'), ('LC_TIME', 'ja_JP.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/hiromasa'), ('OLDPWD', '/home/hiromasa'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ja_JP.UTF-8'), ('SYSTEMD_EXEC_PID', '1876'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/hiromasa/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'hiromasa'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'hiromasa'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/hiromasa-CFSV9-1:@/tmp/.ICE-unix/1656,unix/hiromasa-CFSV9-1:/tmp/.ICE-unix/1656'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ja_JP.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/615ab4b0_5c5e_4469_a1e2_6da9cbb23fba'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ja_JP.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.35KHB2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.107'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/hiromasa/ros2_ws/install/mypkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ja_JP.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ja_JP.UTF-8'), ('LC_IDENTIFICATION', 'ja_JP.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/hiromasa/ros2_ws/build/mypkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'ja_JP.UTF-8'), ('LC_PAPER', 'ja_JP.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/hiromasa/ros2_ws/install/mypkg:/opt/ros/humble')]), 'shell': False}
+[4.851584] (mypkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.851825] (mypkg) StdoutLine: {'line': b'-- Installing: /home/hiromasa/ros2_ws/install/mypkg/lib/mypkg/mypkg\n'}
+[4.852379] (mypkg) StdoutLine: {'line': b'-- Set runtime path of "/home/hiromasa/ros2_ws/install/mypkg/lib/mypkg/mypkg" to ""\n'}
+[4.852576] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/ament_index/resource_index/package_run_dependencies/mypkg\n'}
+[4.852695] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/ament_index/resource_index/parent_prefix_path/mypkg\n'}
+[4.852857] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/ament_prefix_path.sh\n'}
+[4.852978] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/ament_prefix_path.dsv\n'}
+[4.853177] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/path.sh\n'}
+[4.853276] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/path.dsv\n'}
+[4.853366] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.bash\n'}
+[4.853447] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.sh\n'}
+[4.853529] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.zsh\n'}
+[4.853611] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.dsv\n'}
+[4.853693] (mypkg) StdoutLine: {'line': b'-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/package.dsv\n'}
+[4.853832] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/ament_index/resource_index/packages/mypkg\n'}
+[4.853916] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/cmake/mypkgConfig.cmake\n'}
+[4.853994] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/cmake/mypkgConfig-version.cmake\n'}
+[4.854071] (mypkg) StdoutLine: {'line': b'-- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/package.xml\n'}
+[4.854796] (mypkg) CommandEnded: {'returncode': 0}
+[4.898694] (mypkg) JobEnded: {'identifier': 'mypkg', 'rc': 0}
+[4.899485] (-) EventReactorShutdown: {}

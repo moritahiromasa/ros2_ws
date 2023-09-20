@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target mypkg[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/mypkg.dir/src/mypkg.cpp.o[0m
+[100%] [32m[1mLinking CXX executable mypkg[0m
+[100%] Built target mypkg
+-- Install configuration: ""
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/lib/mypkg/mypkg
+-- Set runtime path of "/home/hiromasa/ros2_ws/install/mypkg/lib/mypkg/mypkg" to ""
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/ament_index/resource_index/package_run_dependencies/mypkg
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/ament_index/resource_index/parent_prefix_path/mypkg
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/ament_prefix_path.sh
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/ament_prefix_path.dsv
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/path.sh
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/path.dsv
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.bash
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.sh
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.zsh
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.dsv
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/package.dsv
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/ament_index/resource_index/packages/mypkg
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/cmake/mypkgConfig.cmake
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/cmake/mypkgConfig-version.cmake
+-- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/package.xml

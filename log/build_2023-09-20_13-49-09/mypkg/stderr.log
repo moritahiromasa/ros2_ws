@@ -1,0 +1,7 @@
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:916:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kthreshold_n[m[K’ was not declared in this scope
+  916 |         Edge_Emphasis(img, &[01;31m[Kthreshold_n[m[K);
+      |                             [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mypkg.dir/build.make:76: CMakeFiles/mypkg.dir/src/mypkg.cpp.o] エラー 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mypkg.dir/all] エラー 2
+gmake: *** [Makefile:146: all] エラー 2

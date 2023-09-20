@@ -1,0 +1,11 @@
+[0.013s] Invoking command in '/home/hiromasa/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/hiromasa/ros2_ws/build/mypkg -- -j8 -l8
+[0.053s] [35m[1mConsolidate compiler generated dependencies of target mypkg[0m
+[0.071s] [ 50%] [32mBuilding CXX object CMakeFiles/mypkg.dir/src/mypkg.cpp.o[0m
+[3.203s] [01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[3.203s] [01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:916:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kthreshold_n[m[K’ was not declared in this scope
+[3.203s]   916 |         Edge_Emphasis(img, &[01;31m[Kthreshold_n[m[K);
+[3.203s]       |                             [01;31m[K^~~~~~~~~~~[m[K
+[4.070s] gmake[2]: *** [CMakeFiles/mypkg.dir/build.make:76: CMakeFiles/mypkg.dir/src/mypkg.cpp.o] エラー 1
+[4.070s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mypkg.dir/all] エラー 2
+[4.070s] gmake: *** [Makefile:146: all] エラー 2
+[4.072s] Invoked command in '/home/hiromasa/ros2_ws/build/mypkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/hiromasa/ros2_ws/build/mypkg -- -j8 -l8
