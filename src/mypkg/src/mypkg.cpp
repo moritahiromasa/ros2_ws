@@ -637,7 +637,7 @@ void isolate_point(int p[9], int** binaryImg){
 void route_search(int* lines_count, int* one, int* two, int* count, int p[9], int point[NUM][XY], int** binaryImg){
 	FILE* fp = fopen("/home/hiromasa/ros2_ws/CSV/coordinate.csv", "w");
 	
-	string input_file = "/home/hiromasa/ros2_ws/image/img14.png";
+	string input_file = "/home/hiromasa/ros2_ws/image/img13.png";
 	Mat route_img = imread(input_file, IMREAD_COLOR);
 	
 	string output_file = "/home/hiromasa/ros2_ws/image/output/mypkg/route_0.png";
@@ -879,7 +879,7 @@ int main(int argc, char** argv){
 	// 検出した座標を格納するための配列
 	int end_point[NUM][XY]; 
 	
-	string input_filename = "/home/hiromasa/ros2_ws/image/img14.png";
+	string input_filename = "/home/hiromasa/ros2_ws/image/img13.png";
 	string output_filename0 = "/home/hiromasa/ros2_ws/image/output/mypkg/gaussian_laplacian.png";
 	string output_filename1 = "/home/hiromasa/ros2_ws/image/output/mypkg/thinning.png";
 	string output_filename2 = "/home/hiromasa/ros2_ws/image/output/mypkg/histogram.png";
