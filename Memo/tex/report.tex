@@ -28,7 +28,7 @@
 \subsection{人のような描き方の定義}
 本研究では$\lbrack4\rbrack$を参考に描き方の方針を進めている.
 顔のパーツ配置が定まりやすいという部分に焦点を当てた.
-手順を以下に示す.\\
+手順としては、最初に顎を描き、次に髪などの頭上部、そして首、
 \begin{enumerate}
 	\setlength{\parskip}{0cm}
 	\setlength{\itemsep}{0cm}
@@ -77,13 +77,23 @@
 線画を生成する過程で繋がっているはずの線が途切れてしまうというのが一つの理由である.
 それは平滑化、エッジ抽出、細線化処理を施すからである.
 
+\end{multicols}
 \section{ロボットの機構}
 本研究で用いるロボットは3軸のマニピュレータロボットである.
-以下のようにアームの先端、姿勢の関節角を$\theta_1, \theta_2, \theta_3$、各リンクの長さ$l_1, l_2, l_3, l_4$とし、逆運動学問題を解く.
-またリンク座標系を定める方法として、DH記法(Denavit-Hartenberg記法)を使用している.
+下の図1のようにアームの先端、姿勢の関節角を$\theta_1, \theta_2, \theta_3$、各リンクの長さ$l_1, l_2, l_3, l_4$とし、逆運動学問題を解く.
+またリンク座標系を定める方法として、DH記法(Denavit-Hartenberg記法)を用いる.
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=100mm]{/home/hiromasa/ros2_ws/Memo/tex/img/img1.png}
+\caption{リンク座標系}
+\end{center}
+\end{figure}
 
 
 
+\begin{multicols}{2} %二段組にする
 座標系0から3への座標変換行列 
 $$
 	^{0}T_{3}=^{0}T_{1} ^{1}T_{2} ^{2}T_{3} \\
