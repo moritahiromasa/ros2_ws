@@ -27,7 +27,7 @@ with open('/home/hiromasa/ros2_ws/CSV/HelloKitty.csv') as f:
 # print(position)
 
 # 初期姿勢
-def init_position( ):
+def position_init( ):
 	pi.set_servo_pulsewidth( SERVO_PIN_1, 1750 ) # SERVO1はtheta1に相当
 	time.sleep( 1 )
 
@@ -73,7 +73,7 @@ def InverseKinematics():
 
 # main関数
 def main(argv):
-	init_position():
+	init_position()
 #	InverseKinematics():
 	
 	return 0
