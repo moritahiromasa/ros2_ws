@@ -42,7 +42,8 @@ void InverseKinematics(){
 	}
 
 	while(fscanf(fp, "%d", "%d", "%d", &x, &y, &z) != EOF){
-		
+		if(z == 10)
+			time
 	}
 	
 	fclose(fp);
