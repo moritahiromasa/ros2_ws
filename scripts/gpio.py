@@ -2,7 +2,7 @@
 
 import pigpio
 import time
-import math as m
+import math 
 import csv
 import pprint
 

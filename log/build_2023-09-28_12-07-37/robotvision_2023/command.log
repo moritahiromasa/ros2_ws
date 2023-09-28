@@ -1,0 +1,6 @@
+Invoking command in '/home/hiromasa/ros2_ws/build/robotvision_2023': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hiromasa/ros2_ws/src/robotvision_2023 -DCMAKE_INSTALL_PREFIX=/home/hiromasa/ros2_ws/install/robotvision_2023
+Invoked command in '/home/hiromasa/ros2_ws/build/robotvision_2023' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/hiromasa/ros2_ws/src/robotvision_2023 -DCMAKE_INSTALL_PREFIX=/home/hiromasa/ros2_ws/install/robotvision_2023
+Invoking command in '/home/hiromasa/ros2_ws/build/robotvision_2023': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hiromasa/ros2_ws/build/robotvision_2023 -- -j8 -l8
+Invoked command in '/home/hiromasa/ros2_ws/build/robotvision_2023' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hiromasa/ros2_ws/build/robotvision_2023 -- -j8 -l8
+Invoking command in '/home/hiromasa/ros2_ws/build/robotvision_2023': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hiromasa/ros2_ws/build/robotvision_2023
+Invoked command in '/home/hiromasa/ros2_ws/build/robotvision_2023' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hiromasa/ros2_ws/build/robotvision_2023
