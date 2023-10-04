@@ -1,0 +1,36 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/mypkg.dir/src/mypkg.cpp.o[0m
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K In function ‘[01m[Kvoid route_search(int*, int*, int*, int*, int*, int (*)[2], int**)[m[K’:
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:715:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kj[m[K’ was not declared in this scope
+  715 |                                 *lines_count = [01;31m[Kj[m[K;
+      |                                                [01;31m[K^[m[K
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K At global scope:
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:735:22:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K([m[K’ token
+  735 |         isolate_point[01;31m[K([m[Kp, binaryImg);
+      |                      [01;31m[K^[m[K
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:738:22:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K+=[m[K’ token
+  738 |         *lines_count [01;31m[K+=[m[K 1;
+      |                      [01;31m[K^~[m[K
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:740:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ does not name a type
+  740 |         [01;31m[Kcout[m[K << "it will follow no end point line " << endl;
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:741:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfor[m[K’
+  741 |         [01;31m[Kfor[m[K(int y = 1; y < height-1; y++){
+      |         [01;31m[K^~~[m[K
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:741:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ky[m[K’ does not name a type
+  741 |         for(int y = 1; [01;31m[Ky[m[K < height-1; y++){
+      |                        [01;31m[K^[m[K
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:741:38:[m[K [01;31m[Kerror: [m[K‘[01m[Ky[m[K’ does not name a type
+  741 |         for(int y = 1; y < height-1; [01;31m[Ky[m[K++){
+      |                                      [01;31m[K^[m[K
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:795:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdelete[m[K’
+  795 |         [01;31m[Kdelete[m[K[] check;
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:796:15:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K([m[K’ token
+  796 |         fclose[01;31m[K([m[Kfp);
+      |               [01;31m[K^[m[K
+[01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:797:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  797 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/mypkg.dir/build.make:76: CMakeFiles/mypkg.dir/src/mypkg.cpp.o] エラー 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mypkg.dir/all] エラー 2
+gmake: *** [Makefile:146: all] エラー 2

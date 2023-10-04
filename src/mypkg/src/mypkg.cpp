@@ -634,11 +634,35 @@ void isolate_point(int p[9], int** binaryImg){
 		}
 	}
 }
+
+int xy_rotate(int xy){
+	return xy + 60;
+}
+
+Mat Img_Resize(Mat img){
+	// 長方形の画像を正方形にリサイズ
+	if(img.cols != img.rows){
+		if(img.cols < img.rows)	// タテ長の場合
+			resize(img, img, Size(), 94.0/ img.cols, 94.0/ img.cols);
+		else if(img.cols < img.rows) // ヨコ長の場合
+			resize(img, img, Size(), 94.0/ img.rows, 94.0/ img.rows);
+	}
+
+	if(img.cols > 96) 
+		resize(img, img, Size(), 94.0/ img.rows, 94.0/ img.rows);
+
+	return img;
+}
+
 void route_search(int* lines_count, int* one, int* two, int* count, int p[9], int point[NUM][XY], int** binaryImg){
-	FILE* fp = fopen("/home/hiromasa/ros2_ws/CSV/coordinate.csv", "w");
+	FILE* fp = fopen("/home/hiromasa/ros2_ws/CSV/normal_coordinate.csv", "w");
+	FILE* gp = fopen("/home/hiromasa/ros2_ws/CSV/correct_coordinate.csv", "w");
 	
-	string input_file = "/home/hiromasa/ros2_ws/image/img13.png";
+	string input_file = "/home/hiromasa/ros2_ws/image/img10.png";
 	Mat route_img = imread(input_file, IMREAD_COLOR);
+	
+	// 長方形の画像を正方形にリサイズ
+	route_img = Img_Resize(route_img);
 	
 	string output_file = "/home/hiromasa/ros2_ws/image/output/mypkg/route_0.png";
 	route_img.setTo(Scalar(255, 255, 255));
@@ -668,10 +692,14 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 		
 		if(j > 0){
 			fprintf(fp, "%d,%d,%d\n", x_pixels, y_pixels, 10); // 端点に辿り着いたら,持ち上げたアームを紙にくっつける
+			fprintf(gp, "%d,%d,%d\n", xy_rotate(x_pixels) , xy_rotate(y_pixels), 10); // 端点に辿り着いたら,持ち上げたアームを紙にくっつける
 		}
 		
 		z_pixels = 0;
+		
 		fprintf(fp, "%d,%d,%d\n", x_pixels, y_pixels, z_pixels);
+		fprintf(gp, "%d,%d,%d\n", xy_rotate(x_pixels) , xy_rotate(y_pixels), z_pixels); // 
+		
 		line_color(route_img, &x_pixels, &y_pixels);
 		
 		cout << "(x, y, z)" << endl;
@@ -681,6 +709,7 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 		first(p, &x_pixels, &y_pixels, &one_before);
 	
 		fprintf(fp, "%d,%d,%d\n", x_pixels, y_pixels, z_pixels);
+		fprintf(gp, "%d,%d,%d\n", xy_rotate(x_pixels) , xy_rotate(y_pixels), z_pixels); // 
 		line_color(route_img, &x_pixels, &y_pixels);
 		
 		for(int k = 0; k < 1000; k++){
@@ -701,7 +730,10 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 			}
 	
 		cout << x_pixels << "," << y_pixels  << "," << z_pixels << "\t" << one_before << "," << two_before << endl;
+		
 		fprintf(fp, "%d,%d,%d\n", x_pixels, y_pixels, z_pixels);
+		fprintf(gp, "%d,%d,%d\n", xy_rotate(x_pixels) , xy_rotate(y_pixels), z_pixels); // 
+		
 		line_color(route_img, &x_pixels, &y_pixels);
 		old_x_pixels = x_pixels;
 		old_y_pixels = y_pixels;
@@ -709,6 +741,8 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 		minimum_distance(&x_pixels, &y_pixels, &(*count), &n, point, check);
 	
 		fprintf(fp, "%d,%d,%d\n", x_pixels, y_pixels, 10); // 端点に辿り着いたら一度持ち上げる動作
+		fprintf(gp, "%d,%d,%d\n", xy_rotate(x_pixels) , xy_rotate(y_pixels), 10); // 
+		
 		imwrite(output_file, route_img);
 	}
 
@@ -733,7 +767,10 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 				
 				cout << "(x, y, z)" << endl;
 				cout << x_pixels << "," << y_pixels  << "," << z_pixels << "\t" << one_before << "," << two_before << endl;
+				
 				fprintf(fp, "%d,%d,%d\n", x_pixels, y_pixels, z_pixels);
+				fprintf(gp, "%d,%d,%d\n", xy_rotate(x_pixels) , xy_rotate(y_pixels), z_pixels); // 
+				
 				line_color(route_img, &x_pixels, &y_pixels);
 			
 				for(int i = 0; i < 10000; i++){
@@ -753,7 +790,10 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 					}
 			
 					cout << x_pixels << "," << y_pixels  << "," << z_pixels << "\t" << one_before << "," << two_before << endl;
+					
 					fprintf(fp, "%d,%d,%d\n", x_pixels, y_pixels, z_pixels);
+					fprintf(gp, "%d,%d,%d\n", xy_rotate(x_pixels) , xy_rotate(y_pixels), z_pixels); // 
+					
 					line_color(route_img, &x_pixels, &y_pixels);
 					old_x_pixels = x_pixels;
 					old_y_pixels = y_pixels;
@@ -762,12 +802,14 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 				(*lines_count) += 1;
 				imwrite(output_file, route_img); // 線一つ分を画像に一枚保存する		
 				fprintf(fp, "%d,%d,%d\n", x_pixels, y_pixels, 10); // 端点に辿り着いたら一度持ち上げる動作
+				fprintf(gp, "%d,%d,%d\n", xy_rotate(x_pixels) , xy_rotate(y_pixels), 10); // 
 			}
 		}
 	}	
 //	print_binaryImg(binaryImg); // Print	
 	delete[] check;
 	fclose(fp);
+	fclose(gp);
 }
 
 
@@ -879,7 +921,7 @@ int main(int argc, char** argv){
 	// 検出した座標を格納するための配列
 	int end_point[NUM][XY]; 
 	
-	string input_filename = "/home/hiromasa/ros2_ws/image/img13.png";
+	string input_filename = "/home/hiromasa/ros2_ws/image/img10.png";
 	string output_filename0 = "/home/hiromasa/ros2_ws/image/output/mypkg/gaussian_laplacian.png";
 	string output_filename1 = "/home/hiromasa/ros2_ws/image/output/mypkg/thinning.png";
 	string output_filename2 = "/home/hiromasa/ros2_ws/image/output/mypkg/histogram.png";
@@ -892,17 +934,11 @@ int main(int argc, char** argv){
 	if(img.empty())
 		cerr << "ERROR:Imge file not found." << endl;
 
+	img = Img_Resize(img);
+	
 	::width = img.cols; //  x
 	::height = img.rows; // y
-
-	// 長方形の画像を正方形にリサイズ
-	if(width < height){
-		height = width;
-		resize(img, img, Size(), width, height);
-	} else if(height < width){
-		width = height;
-		resize(img, img, Size(), width, height);
-	}
+	cout << "(width, height)=" << width << ", " << height << endl;
 
 	// ガウシアンラプラシアンフィルタ
 	const int filterSize = 3;

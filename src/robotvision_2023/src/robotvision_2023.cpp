@@ -20,10 +20,7 @@
 using namespace std;
 using namespace cv;
 
-void demosaicing(Mat img, ){
-	int r, g, b;
-	int bayer_array[4];
-	for(int x = 0; x < width - 1; x++)
+void demosaicing(Mat img){
 }
 
 int main(int argc, char** argv){
@@ -38,7 +35,6 @@ int main(int argc, char** argv){
 		cerr << "ERROR:Imge file not found." << endl;
 
 	demosaicing(img);
-
 
 	return 0;
 }

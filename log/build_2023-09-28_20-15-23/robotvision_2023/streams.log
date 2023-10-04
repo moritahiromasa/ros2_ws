@@ -1,0 +1,30 @@
+[0.013s] Invoking command in '/home/hiromasa/ros2_ws/build/robotvision_2023': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hiromasa/ros2_ws/build/robotvision_2023 -- -j8 -l8
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target robotvision_2023[0m
+[0.067s] [ 50%] [32mBuilding CXX object CMakeFiles/robotvision_2023.dir/src/robotvision_2023.cpp.o[0m
+[3.162s] [01m[K/home/hiromasa/ros2_ws/src/robotvision_2023/src/robotvision_2023.cpp:[m[K In function ‘[01m[Kvoid demosaicing(cv::Mat)[m[K’:
+[3.162s] [01m[K/home/hiromasa/ros2_ws/src/robotvision_2023/src/robotvision_2023.cpp:23:22:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kimg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.162s]    23 | void demosaicing([01;35m[KMat img[m[K){
+[3.162s]       |                  [01;35m[K~~~~^~~[m[K
+[4.057s] [100%] [32m[1mLinking CXX executable robotvision_2023[0m
+[4.454s] [100%] Built target robotvision_2023
+[4.466s] Invoked command in '/home/hiromasa/ros2_ws/build/robotvision_2023' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hiromasa/ros2_ws/build/robotvision_2023 -- -j8 -l8
+[4.489s] Invoking command in '/home/hiromasa/ros2_ws/build/robotvision_2023': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hiromasa/ros2_ws/build/robotvision_2023
+[4.495s] -- Install configuration: ""
+[4.497s] -- Installing: /home/hiromasa/ros2_ws/install/robotvision_2023/lib/robotvision_2023/robotvision_2023
+[4.497s] -- Set runtime path of "/home/hiromasa/ros2_ws/install/robotvision_2023/lib/robotvision_2023/robotvision_2023" to ""
+[4.497s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/ament_index/resource_index/package_run_dependencies/robotvision_2023
+[4.498s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/ament_index/resource_index/parent_prefix_path/robotvision_2023
+[4.498s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/environment/ament_prefix_path.sh
+[4.498s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/environment/ament_prefix_path.dsv
+[4.498s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/environment/path.sh
+[4.498s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/environment/path.dsv
+[4.498s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/local_setup.bash
+[4.498s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/local_setup.sh
+[4.498s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/local_setup.zsh
+[4.498s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/local_setup.dsv
+[4.498s] -- Installing: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/package.dsv
+[4.499s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/ament_index/resource_index/packages/robotvision_2023
+[4.499s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/cmake/robotvision_2023Config.cmake
+[4.499s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/cmake/robotvision_2023Config-version.cmake
+[4.499s] -- Up-to-date: /home/hiromasa/ros2_ws/install/robotvision_2023/share/robotvision_2023/package.xml
+[4.503s] Invoked command in '/home/hiromasa/ros2_ws/build/robotvision_2023' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hiromasa/ros2_ws/build/robotvision_2023

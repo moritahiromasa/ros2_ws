@@ -1,0 +1,30 @@
+[0.017s] Invoking command in '/home/hiromasa/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hiromasa/ros2_ws/build/mypkg -- -j8 -l8
+[0.065s] [35m[1mConsolidate compiler generated dependencies of target mypkg[0m
+[0.081s] [ 50%] [32mBuilding CXX object CMakeFiles/mypkg.dir/src/mypkg.cpp.o[0m
+[3.160s] [01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K In function ‘[01m[Kvoid route_search(int*, int*, int*, int*, int*, int (*)[2], int**)[m[K’:
+[3.160s] [01m[K/home/hiromasa/ros2_ws/src/mypkg/src/mypkg.cpp:648:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kgp[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.160s]   648 |         FILE* [01;35m[Kgp[m[K = fopen("/home/hiromasa/ros2_ws/CSV/rotate_coordinate.csv", "w");
+[3.160s]       |               [01;35m[K^~[m[K
+[4.295s] [100%] [32m[1mLinking CXX executable mypkg[0m
+[4.715s] [100%] Built target mypkg
+[4.727s] Invoked command in '/home/hiromasa/ros2_ws/build/mypkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/hiromasa/ros2_ws/build/mypkg -- -j8 -l8
+[4.750s] Invoking command in '/home/hiromasa/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hiromasa/ros2_ws/build/mypkg
+[4.757s] -- Install configuration: ""
+[4.758s] -- Installing: /home/hiromasa/ros2_ws/install/mypkg/lib/mypkg/mypkg
+[4.758s] -- Set runtime path of "/home/hiromasa/ros2_ws/install/mypkg/lib/mypkg/mypkg" to ""
+[4.759s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/ament_index/resource_index/package_run_dependencies/mypkg
+[4.759s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/ament_index/resource_index/parent_prefix_path/mypkg
+[4.759s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/ament_prefix_path.sh
+[4.759s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/ament_prefix_path.dsv
+[4.759s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/path.sh
+[4.759s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/environment/path.dsv
+[4.760s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.bash
+[4.760s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.sh
+[4.760s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.zsh
+[4.760s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/local_setup.dsv
+[4.760s] -- Installing: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/package.dsv
+[4.760s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/ament_index/resource_index/packages/mypkg
+[4.760s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/cmake/mypkgConfig.cmake
+[4.760s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/cmake/mypkgConfig-version.cmake
+[4.760s] -- Up-to-date: /home/hiromasa/ros2_ws/install/mypkg/share/mypkg/package.xml
+[4.762s] Invoked command in '/home/hiromasa/ros2_ws/build/mypkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/hiromasa/ros2_ws/build/mypkg
