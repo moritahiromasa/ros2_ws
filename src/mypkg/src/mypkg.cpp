@@ -643,13 +643,13 @@ Mat Img_Resize(Mat img){
 	// 長方形の画像を正方形にリサイズ
 	if(img.cols != img.rows){
 		if(img.cols < img.rows)	// タテ長の場合
-			resize(img, img, Size(), 94.0/ img.cols, 94.0/ img.cols);
+			resize(img, img, Size(), 76.0/ img.cols, 76.0/ img.cols);
 		else if(img.cols < img.rows) // ヨコ長の場合
-			resize(img, img, Size(), 94.0/ img.rows, 94.0/ img.rows);
+			resize(img, img, Size(), 76.0/ img.rows, 76.0/ img.rows);
 	}
 
-	if(img.cols > 96) 
-		resize(img, img, Size(), 94.0/ img.rows, 94.0/ img.rows);
+	if(img.cols > 76) 
+		resize(img, img, Size(), 76.0/ img.rows, 76.0/ img.rows);
 
 	return img;
 }

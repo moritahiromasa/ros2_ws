@@ -37,29 +37,16 @@ def InverseKinematics():
 		for row in reader:
 			# 各サーボのtheta1~3を求める
 			theta1 = THETA_1( int(row[0]), int(row[1]) )
-			servo_degree1 = m.degrees( theta1 )
+			servo_degree1 = m.degrees( theta1 ) % 180
 			
 			theta3 = THETA_3( int(row[0]), int(row[1]), int(row[2]), theta1 )
-			servo_degree3 = m.degrees( theta3 )
+			servo_degree3 = m.degrees( theta3 ) % 180
 			
 			theta2 = THETA_2( int(row[0]), int(row[1]), int(row[2]), theta1, theta3 )
-			servo_degree2 = m.degrees( theta2 )
+			servo_degree2 = m.degrees( theta2 ) % 180
 
-#			a = (l4**2 + l3**2 + l2**2 - (y / m.sin(theta1))**2 - (z - l1)**2 ) / (2*l2*m.sqrt( l4**2 + l3**2) )
-#			b = (-l3 / m.sqrt( l4**2 + l3**2 )) 
-#			print("a: {}, b: {}".format(a, b))
-
-			#ks = 1 / m.sqrt(c**2 + d**2) 
-			#ps = m.acos( 1 / m.sqrt(c**2 + d**2))
-			#if -1 <= ks<= 1:
-			#	print("ks: {}, acos(): {}".format(ks, ps))
-			#	print("ks: {}".format(ks))
-			#else:
-			#	print("math domain error: {}, x: {}, y: {}".format(ks, row[0], row[1]))
 				
 #			print("theta1: {}, theta2: {}, theta3: {}".format(theta1, theta2, theta3))
-			#print("theta1: {}, theta3: {}".format(theta1, theta3))
-		#	print("servo1: {}, servo3: {}".format(servo_degree1, servo_degree3))
 			print("servo1: {}, servo2: {}, servo3: {}".format(servo_degree1, servo_degree2, servo_degree3))
 
 
