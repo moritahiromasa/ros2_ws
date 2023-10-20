@@ -20,34 +20,34 @@ l4 = 40
 
 ##### theta1 ~ theta3までの角度を求める ####
 def THETA_1(x, y):
-	return ( m.acos( (x**2 - y**2) / ( x**2 + y**2) ) / 2)
+	return ( 0.5*m.acos( (x**2 - y**2) / ( x**2 + y**2) ))
 
-def THETA_3( x, y, z, theta1):
-	return m.acos( (l4**2 + l3**2 + l2**2 - (y / m.sin(theta1))**2 - (z - l1)**2 ) / ( 2*l2*m.sqrt( l4**2 + l3**2 ) )) + m.acos( -l3 / m.sqrt( l4**2 + l3**2 ))  
+def THETA_2(x, y, z):
+	return m.acos( (-l2**2 + l3**2 + l4**2 - (x**2 + y**2) - (z - l1)**2) / ( 2*l2*m.sqrt(x**2 + y**2 + (z - l1)**2) ) ) + m.atan(-m.sqrt(x**2 + y**2) / (l1 - z))
 
-def THETA_2(x, y, z, theta1, theta3):
-	return m.acos( ( -l4*m.sin(theta3) + l3*m.cos(theta3) + l2) / m.sqrt( (y / m.sin(theta1))**2 + (z - l1)**2) ) + m.acos( (z -l1) / m.sqrt( (y / m.sin(theta1) )**2 + (z -l1)**2 ) ) 
+def THETA_3( x, y, z):
+	return m.acos( ( x**2 + y**2 + (z - l1)**2 - l4**2 - l3**2 - l2**2) / (2*l2*m.sqrt(l3**2 + l4**2)) ) + m.atan(-l4 / l3)
+
 
 #### 逆運動学の解を求める  ####
 
 
 def InverseKinematics():
-	with open('/home/hiromasa/ros2_ws/CSV/correct_plane.csv') as file:
-		reader = csv.reader(file) # for文で行ごとのデータをリストで取得
-		for row in reader:
-			# 各サーボのtheta1~3を求める
-			theta1 = THETA_1( int(row[0]), int(row[1]) )
-			servo_degree1 = m.degrees( theta1 ) % 180
-			
-			theta3 = THETA_3( int(row[0]), int(row[1]), int(row[2]), theta1 )
-			servo_degree3 = m.degrees( theta3 ) % 180
-			
-			theta2 = THETA_2( int(row[0]), int(row[1]), int(row[2]), theta1, theta3 )
-			servo_degree2 = m.degrees( theta2 ) % 180
-
+	for x in range(1, 89):
+		# 各サーボのtheta1~3を求める
+		y = m.sqrt(195**2 - x**2)
+		z = float(0)
+		theta1 = THETA_1( float(x), float(y))
+		theta2 = THETA_2( float(x), float(y), z)
+		theta3 = THETA_3( float(x), float(y), z)
+		
+		degree1 = theta1*180/m.pi
+		degree2 = theta2*180/m.pi
+		degree3 = theta3*180/m.pi
 				
-#			print("theta1: {}, theta2: {}, theta3: {}".format(theta1, theta2, theta3))
-			print("servo1: {}, servo2: {}, servo3: {}".format(servo_degree1, servo_degree2, servo_degree3))
+		#print("theta1: {}, theta2: {}, theta3: {}".format(theta1, theta2, theta3))
+		print("degree1: {}, degree2: {}, degree3: {}".format(round(degree1), round(degree2), round(degree3)))
+		#print("servo1: {}, servo2: {}, servo3: {}".format(servo_degree1, servo_degree2, servo_degree3))
 
 
 # main関数
