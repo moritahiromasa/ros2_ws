@@ -24,6 +24,12 @@
 \begin{multicols}{2} %二段組にする
 
 \section{導入}
+描画ロボットにおいてプロッターやそれに似た機構で絵を描かせる研究や開発は多く見られるが、人の腕に似た機構であるロボットアームを用いて絵を描かせる研究はあまり存在しない.
+じつは現代の美術の人物などのデッサンにおいては輪郭を明確に描くやり方はあまり取らない.
+それは古典的なやり方で、昔の巨匠が実際そのように描くことは普通だった.
+今でも意図的な理由があって、輪郭を描くことである表現をしたい場合に使うことは確かにある.
+人に似たのような描き方をさせたいという以上、輪郭やどこから描くなどの描き順に拘りたい所ではあるが、描き順のパターンを機械学習に任せて描かせることなども含めて行うのは難易度がかなり高い.
+そこで今回は３軸のロボットアームで、一枚の画像の輪郭を抽出し、人が描くような描き方を考えたい.
 線の経路を求める方法は現時点で２通り考えている. 
 一方が左上から右下へ走査していき、線の画素を見つける度にたどるラスタスキャンの方法である. 
 もう一方は端点を持つ線から描いていく方法である.
@@ -62,8 +68,8 @@
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=100mm]{/home/hiromasa/ros2_ws/Memo/tex/img/img1.png}
-\caption{リンク座標系}
+\includegraphics[width=65mm]{/home/morita/ros2_ws/Memo/tex/img/IMG_0025.PNG}
+\caption{実機}
 \end{center}
 \end{figure}
 
@@ -157,31 +163,22 @@ $$
 	\end{array}
 	\right.
 \end{equation*}
-これらを解くと
+これらの逆運動学を解くと
 \tiny
 \begin{equation*}
 \left\{
 	\begin{array}{c}
 	\begin{split}
 		&\theta_1=\frac{1}{2}cos^{-1}\biggl( \frac{x^2-y^2}{x^2+y^2} \biggr) \\
-		&\theta_3= cos^{-1}\biggl( \frac{1}{\sqrt{a^2+b^2}}\biggr) + cos^{-1}\biggl( \frac{b}{\sqrt{a^2+b^2}}\biggr)\\
-		&\theta_2= cos^{-1}\biggl( \frac{1}{\sqrt{c^2+d^2}}\biggr) + cos^{-1}\biggl( \frac{d}{\sqrt{c^2+d^2}}\biggr)
+		&\theta_2= cos^{-1}\biggl( \frac{x^2+y^2+(z-l1)^2+l_2^2-l_3^2-l_4^2}{2l_    2\sqrt{x^2+y^2+(z-l_1)^2}} \biggr)+tan^{-1}\biggl( \frac{\sqrt{x^2+y^2}}{z-l1}\biggr) \\
+		&\theta_3=cos^{-1}\biggl( \frac{x^2+y^2+(z-l1)^2-l_4^2-l_3^2-l_2^2}{2l_2    \sqrt{l_3^2+l_4^2}}\biggr)+tan^{-1}\biggl( \frac{-l_4}{l_3}\biggr)
 	\end{split}
 	\end{array}
 \right.
 \end{equation*}
 \small
-ただし、
-\begin{equation*}
-	\left(\quad
-	\begin{split}
-		&a=\frac{2l_2}{l_4^2+l_3^2+l_2^2-\{x^2+y^2+(z-l_1)^2 \} }l_4\\
-		&b=\frac{2l_2}{l_4^2+l_3^2+l_2^2-\{x^2+y^2+(z-l_1)^2 \} }l_3\\
-		&c=\frac{l_2S_3-l_4}{ C_3(z-l_1)+S_3\bigl(\frac{x}{C_1}\bigr)}\\
-		&d=\frac{l_2S_3+l_3}{ C_3(z-l_1)+S_3\bigl(\frac{x}{C_1}\bigr)}
-	\end{split}
-	\quad\right)
-\end{equation*}
+
+
 
 \section{実験}
 今回は端点を持つ線から描く場合と、ラスタスキャンで線の経路を求めた場合を比較し、より人らしい描き方の方を用いる.
