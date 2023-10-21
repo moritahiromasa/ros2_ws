@@ -33,7 +33,7 @@ def THETA_3( x, y, z):
 
 
 def InverseKinematics():
-	for x in range(1, 89):
+	for x in range(1, 196):	# 1 <= x <= 195
 		# 各サーボのtheta1~3を求める
 		y = m.sqrt(195**2 - x**2)
 		z = float(0)
