@@ -73,9 +73,27 @@
 \end{center}
 \end{figure}
 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=65mm]{/home/morita/ros2_ws/Memo/tex/img/parameter.png}
+\caption{モデル図}
+\end{center}
+\end{figure}
 
+
+\section{手先の位置と回転角の関係}
+
+運動学、逆運動学を用いて、ペン先の位置を各サーボモータの回転角を導出する.
+リンク座標系は以下のように定義する.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=65mm]{/home/morita/ros2_ws/Memo/tex/img/link.png}
+\caption{リンク座標系}
+\end{center}
+\end{figure}
 
 \begin{multicols}{2} %二段組にする
+
 座標系0から3への座標変換行列 
 $$
 	^{0}T_{3}=^{0}T_{1} ^{1}T_{2} ^{2}T_{3} \\
@@ -108,7 +126,7 @@ $$
 \tiny
 \begin{equation*}
 	\begin{array}{cccc}
-		\left( 
+		&\left( 
 			\begin{array}{cccc}
 				1 & 0 & 0 & l_4\\
 				0 & 1 & 0 & 0\\
@@ -123,8 +141,8 @@ $$
 				0 & 0 & 1 & 0\\
 				0 & 0 & 0 & 1 
 			\end{array}
-			\right)
-		=
+			\right)\\
+		&=
 		\left( 
 		\begin{array}{cccc}
 			1 & 0 & 0 & l_4\\
@@ -182,8 +200,10 @@ $$
 
 \section{実験}
 今回は端点を持つ線から描く場合と、ラスタスキャンで線の経路を求めた場合を比較し、より人らしい描き方の方を用いる.
+どちらが人のような描き方に近いかアンケートをx人にとる.
 \section{出力結果}
-以下に今回使用した実機で端点から描いたものと、ラスタスキャンで描いたものを載せる.
+
+以下に今回使用した実機で端点から描いたものと、ラスタスキャンで求めた経路をもとに機械に描かせた画像を載せる.
 
 \section{参考文献}
 
