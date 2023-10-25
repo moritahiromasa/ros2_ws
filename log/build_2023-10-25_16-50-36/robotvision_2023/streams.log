@@ -1,0 +1,6 @@
+[0.052s] Invoking command in '/home/morita/ros2_ws/build/robotvision_2023': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/robotvision_2023 -- -j8 -l8
+[0.072s] [0mCMake Error: The current CMakeCache.txt directory /home/morita/ros2_ws/build/robotvision_2023/CMakeCache.txt is different than the directory /home/hiromasa/ros2_ws/build/robotvision_2023 where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.091s] [0mCMake Error: The source directory "/home/hiromasa/ros2_ws/src/robotvision_2023" does not exist.
+[0.091s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.094s] gmake: *** [Makefile:267: cmake_check_build_system] エラー 1
+[0.098s] Invoked command in '/home/morita/ros2_ws/build/robotvision_2023' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/robotvision_2023 -- -j8 -l8

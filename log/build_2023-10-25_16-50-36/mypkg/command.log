@@ -1,0 +1,2 @@
+Invoking command in '/home/morita/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/mypkg -- -j8 -l8
+Invoked command in '/home/morita/ros2_ws/build/mypkg' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/mypkg -- -j8 -l8
