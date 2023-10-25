@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hiromasa/ros2_ws/src/mypkg
+CMAKE_SOURCE_DIR = /home/morita/ros2_ws/src/mypkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hiromasa/ros2_ws/build/mypkg
+CMAKE_BINARY_DIR = /home/morita/ros2_ws/build/mypkg
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hiromasa/ros2_ws/build/mypkg/CMakeFiles /home/hiromasa/ros2_ws/build/mypkg//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/morita/ros2_ws/build/mypkg/CMakeFiles /home/morita/ros2_ws/build/mypkg//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hiromasa/ros2_ws/build/mypkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/morita/ros2_ws/build/mypkg/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

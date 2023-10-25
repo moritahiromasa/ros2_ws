@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hiromasa/ros2_ws/src/mypkg
+CMAKE_SOURCE_DIR = /home/morita/ros2_ws/src/mypkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hiromasa/ros2_ws/build/mypkg
+CMAKE_BINARY_DIR = /home/morita/ros2_ws/build/mypkg
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/hiromasa/ros2_ws/build/mypkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hiromasa/ros2_ws/src/mypkg /home/hiromasa/ros2_ws/src/mypkg /home/hiromasa/ros2_ws/build/mypkg /home/hiromasa/ros2_ws/build/mypkg /home/hiromasa/ros2_ws/build/mypkg/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/morita/ros2_ws/build/mypkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/morita/ros2_ws/src/mypkg /home/morita/ros2_ws/src/mypkg /home/morita/ros2_ws/build/mypkg /home/morita/ros2_ws/build/mypkg /home/morita/ros2_ws/build/mypkg/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

@@ -1,0 +1,6 @@
+Invoking command in '/home/morita/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/morita/ros2_ws/src/mypkg -DCMAKE_INSTALL_PREFIX=/home/morita/ros2_ws/install/mypkg
+Invoked command in '/home/morita/ros2_ws/build/mypkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/morita/ros2_ws/src/mypkg -DCMAKE_INSTALL_PREFIX=/home/morita/ros2_ws/install/mypkg
+Invoking command in '/home/morita/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/mypkg -- -j8 -l8
+Invoked command in '/home/morita/ros2_ws/build/mypkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/mypkg -- -j8 -l8
+Invoking command in '/home/morita/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/morita/ros2_ws/build/mypkg
+Invoked command in '/home/morita/ros2_ws/build/mypkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/morita/ros2_ws/build/mypkg

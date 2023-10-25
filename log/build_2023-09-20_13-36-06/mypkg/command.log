@@ -1,4 +1,0 @@
-Invoking command in '/home/hiromasa/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/hiromasa/ros2_ws/src/mypkg -DCMAKE_INSTALL_PREFIX=/home/hiromasa/ros2_ws/install/mypkg
-Invoked command in '/home/hiromasa/ros2_ws/build/mypkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/hiromasa/ros2_ws/src/mypkg -DCMAKE_INSTALL_PREFIX=/home/hiromasa/ros2_ws/install/mypkg
-Invoking command in '/home/hiromasa/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/hiromasa/ros2_ws/build/mypkg -- -j8 -l8
-Invoked command in '/home/hiromasa/ros2_ws/build/mypkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/hiromasa/ros2_ws/build/mypkg -- -j8 -l8

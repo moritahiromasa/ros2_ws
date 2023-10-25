@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hiromasa/ros2_ws/src/mypkg
+CMAKE_SOURCE_DIR = /home/morita/ros2_ws/src/mypkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hiromasa/ros2_ws/build/mypkg
+CMAKE_BINARY_DIR = /home/morita/ros2_ws/build/mypkg
 
 # Utility rule file for mypkg_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/mypkg_uninstall.dir/compiler_depend.make
 include CMakeFiles/mypkg_uninstall.dir/progress.make
 
 CMakeFiles/mypkg_uninstall:
-	/usr/bin/cmake -P /home/hiromasa/ros2_ws/build/mypkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/morita/ros2_ws/build/mypkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 mypkg_uninstall: CMakeFiles/mypkg_uninstall
 mypkg_uninstall: CMakeFiles/mypkg_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/mypkg_uninstall.dir/clean:
 .PHONY : CMakeFiles/mypkg_uninstall.dir/clean
 
 CMakeFiles/mypkg_uninstall.dir/depend:
-	cd /home/hiromasa/ros2_ws/build/mypkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hiromasa/ros2_ws/src/mypkg /home/hiromasa/ros2_ws/src/mypkg /home/hiromasa/ros2_ws/build/mypkg /home/hiromasa/ros2_ws/build/mypkg /home/hiromasa/ros2_ws/build/mypkg/CMakeFiles/mypkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/morita/ros2_ws/build/mypkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/morita/ros2_ws/src/mypkg /home/morita/ros2_ws/src/mypkg /home/morita/ros2_ws/build/mypkg /home/morita/ros2_ws/build/mypkg /home/morita/ros2_ws/build/mypkg/CMakeFiles/mypkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/mypkg_uninstall.dir/depend
 

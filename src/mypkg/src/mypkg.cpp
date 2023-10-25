@@ -655,16 +655,16 @@ Mat Img_Resize(Mat img){
 }
 
 void route_search(int* lines_count, int* one, int* two, int* count, int p[9], int point[NUM][XY], int** binaryImg){
-	FILE* fp = fopen("/home/hiromasa/ros2_ws/CSV/normal_coordinate.csv", "w");
-	FILE* gp = fopen("/home/hiromasa/ros2_ws/CSV/correct_coordinate.csv", "w");
+	FILE* fp = fopen("/home/morita/ros2_ws/CSV/normal_coordinate.csv", "w");
+	FILE* gp = fopen("/home/morita/ros2_ws/CSV/correct_coordinate.csv", "w");
 	
-	string input_file = "/home/hiromasa/ros2_ws/image/img10.png";
+	string input_file = "/home/morita/ros2_ws/image/img14.png";
 	Mat route_img = imread(input_file, IMREAD_COLOR);
 	
 	// 長方形の画像を正方形にリサイズ
 	route_img = Img_Resize(route_img);
 	
-	string output_file = "/home/hiromasa/ros2_ws/image/output/mypkg/route_0.png";
+	string output_file = "/home/morita/ros2_ws/image/output/mypkg/route_0.png";
 	route_img.setTo(Scalar(255, 255, 255));
 	imwrite(output_file, route_img);
 	
@@ -686,7 +686,7 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 
 	// 端点から線をたどるとき
 	for(int j = 1; j <= (*count) / 2; j++){
-		string output_file = "/home/hiromasa/ros2_ws/image/output/mypkg/route_" + to_string(j) + ".png";
+		string output_file = "/home/morita/ros2_ws/image/output/mypkg/route_" + to_string(j) + ".png";
 		x_pixels = point[n][1];
 		y_pixels = point[n][0];
 		
@@ -755,7 +755,7 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 	cout << "it will follow no end point line " << endl;
 	for(int y = 1; y < height-1; y++){
 		for(int x = 1; x < width-1; x++){
-			string output_file = "/home/hiromasa/ros2_ws/image/output/mypkg/route_" + to_string(*lines_count) + ".png";
+			string output_file = "/home/morita/ros2_ws/image/output/mypkg/route_" + to_string(*lines_count) + ".png";
 			
 			kernel(x, y, p, binaryImg);
 			if(p[0] == 0){
@@ -921,12 +921,12 @@ int main(int argc, char** argv){
 	// 検出した座標を格納するための配列
 	int end_point[NUM][XY]; 
 	
-	string input_filename = "/home/hiromasa/ros2_ws/image/img10.png";
-	string output_filename0 = "/home/hiromasa/ros2_ws/image/output/mypkg/gaussian_laplacian.png";
-	string output_filename1 = "/home/hiromasa/ros2_ws/image/output/mypkg/thinning.png";
-	string output_filename2 = "/home/hiromasa/ros2_ws/image/output/mypkg/histogram.png";
-	string output_filename3 = "/home/hiromasa/ros2_ws/image/output/mypkg/edge_emphasis.png";
-	string output_filename4 = "/home/hiromasa/ros2_ws/image/output/mypkg/shapeness.png";
+	string input_filename = "/home/morita/ros2_ws/image/img14.png";
+	string output_filename0 = "/home/morita/ros2_ws/image/output/mypkg/gaussian_laplacian.png";
+	string output_filename1 = "/home/morita/ros2_ws/image/output/mypkg/thinning.png";
+	string output_filename2 = "/home/morita/ros2_ws/image/output/mypkg/histogram.png";
+	string output_filename3 = "/home/morita/ros2_ws/image/output/mypkg/edge_emphasis.png";
+	string output_filename4 = "/home/morita/ros2_ws/image/output/mypkg/shapeness.png";
 
 	Mat img = imread(input_filename, IMREAD_GRAYSCALE);
 	Mat grayImg = imread(input_filename, IMREAD_GRAYSCALE);
@@ -998,8 +998,7 @@ int main(int argc, char** argv){
 		delete[] binaryImg[y];
 	delete[] binaryImg;
 
-	cout << "Completed. route image and gray histogram saved. " << endl;
+	cout << "Completed. Route derived from img14.png and CSV file saved. " << endl;
 
 	return 0;
 }
-

@@ -3,8 +3,8 @@
 <package format="3">
   <name>mypkg</name>
   <version>0.0.1</version>
-  <description>drawing robot</description>
-  <maintainer email="hirotamorimasa@gmail.com">hiromasa morita</maintainer>
+  <description>robotic drawing</description>
+  <maintainer email="morimasahirota@gmail.com">morita hiromasa</maintainer>
   <license>BSD</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

@@ -1,0 +1,148 @@
+[0.000000] (-) TimerEvent: {}
+[0.000191] (mypkg) JobQueued: {'identifier': 'mypkg', 'dependencies': OrderedDict()}
+[0.000848] (mypkg) JobStarted: {'identifier': 'mypkg'}
+[0.043973] (mypkg) JobProgress: {'identifier': 'mypkg', 'progress': 'cmake'}
+[0.044451] (mypkg) Command: {'cmd': ['/usr/bin/cmake', '/home/morita/ros2_ws/src/mypkg', '-DCMAKE_INSTALL_PREFIX=/home/morita/ros2_ws/install/mypkg'], 'cwd': '/home/morita/ros2_ws/build/mypkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'morita'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/morita'), ('OLDPWD', '/home/morita'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1921'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'morita'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'morita'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/morita-CFSV9-1:@/tmp/.ICE-unix/1719,unix/morita-CFSV9-1:/tmp/.ICE-unix/1719'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f59ded86_cd8f_4306_bcd8_8f51174fa5c7'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QVCKD2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.109'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/morita/ros2_ws/build/mypkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099904] (-) TimerEvent: {}
+[0.200481] (-) TimerEvent: {}
+[0.271825] (mypkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.300607] (-) TimerEvent: {}
+[0.400954] (-) TimerEvent: {}
+[0.410270] (mypkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.420957] (mypkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.485622] (mypkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.493290] (mypkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.493819] (mypkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.494561] (mypkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.498143] (mypkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.501049] (-) TimerEvent: {}
+[0.571463] (mypkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.579947] (mypkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.580220] (mypkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.580654] (mypkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.584058] (mypkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.601196] (-) TimerEvent: {}
+[0.701489] (-) TimerEvent: {}
+[0.735581] (mypkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.801630] (-) TimerEvent: {}
+[0.824287] (mypkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.874990] (mypkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.880080] (mypkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.889789] (mypkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.901726] (-) TimerEvent: {}
+[0.907137] (mypkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.927681] (mypkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.999928] (mypkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.001831] (-) TimerEvent: {}
+[1.003033] (mypkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.088511] (mypkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.101952] (-) TimerEvent: {}
+[1.108607] (mypkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.144324] (mypkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.155035] (mypkg) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.202110] (-) TimerEvent: {}
+[1.217328] (mypkg) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.217774] (mypkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.279894] (mypkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.280970] (mypkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.302175] (-) TimerEvent: {}
+[1.402445] (-) TimerEvent: {}
+[1.445819] (mypkg) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.502549] (-) TimerEvent: {}
+[1.571819] (mypkg) StdoutLine: {'line': b'-- Found image_transport: 3.1.7 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[1.602615] (-) TimerEvent: {}
+[1.621095] (mypkg) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.5.4") \n'}
+[1.622496] (mypkg) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[1.633827] (mypkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.700654] (mypkg) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.700976] (mypkg) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.701072] (mypkg) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.701784] (mypkg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.702682] (-) TimerEvent: {}
+[1.702950] (mypkg) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.703109] (mypkg) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.703646] (mypkg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.705010] (mypkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.715784] (mypkg) StdoutLine: {'line': b'-- Generating done\n'}
+[1.717070] (mypkg) StdoutLine: {'line': b'-- Build files have been written to: /home/morita/ros2_ws/build/mypkg\n'}
+[1.725914] (mypkg) CommandEnded: {'returncode': 0}
+[1.726496] (mypkg) JobProgress: {'identifier': 'mypkg', 'progress': 'build'}
+[1.727187] (mypkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/morita/ros2_ws/build/mypkg', '--', '-j8', '-l8'], 'cwd': '/home/morita/ros2_ws/build/mypkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'morita'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/morita'), ('OLDPWD', '/home/morita'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1921'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'morita'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'morita'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/morita-CFSV9-1:@/tmp/.ICE-unix/1719,unix/morita-CFSV9-1:/tmp/.ICE-unix/1719'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f59ded86_cd8f_4306_bcd8_8f51174fa5c7'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QVCKD2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.109'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/morita/ros2_ws/build/mypkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.771187] (mypkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/mypkg.dir/src/mypkg.cpp.o\x1b[0m\n'}
+[1.802855] (-) TimerEvent: {}
+[1.903213] (-) TimerEvent: {}
+[2.003642] (-) TimerEvent: {}
+[2.104236] (-) TimerEvent: {}
+[2.204565] (-) TimerEvent: {}
+[2.304930] (-) TimerEvent: {}
+[2.405266] (-) TimerEvent: {}
+[2.505642] (-) TimerEvent: {}
+[2.606202] (-) TimerEvent: {}
+[2.706583] (-) TimerEvent: {}
+[2.806916] (-) TimerEvent: {}
+[2.907270] (-) TimerEvent: {}
+[3.007607] (-) TimerEvent: {}
+[3.107945] (-) TimerEvent: {}
+[3.208293] (-) TimerEvent: {}
+[3.308643] (-) TimerEvent: {}
+[3.408987] (-) TimerEvent: {}
+[3.509357] (-) TimerEvent: {}
+[3.609709] (-) TimerEvent: {}
+[3.710061] (-) TimerEvent: {}
+[3.810429] (-) TimerEvent: {}
+[3.910762] (-) TimerEvent: {}
+[4.011126] (-) TimerEvent: {}
+[4.111543] (-) TimerEvent: {}
+[4.211985] (-) TimerEvent: {}
+[4.312353] (-) TimerEvent: {}
+[4.412697] (-) TimerEvent: {}
+[4.513027] (-) TimerEvent: {}
+[4.613374] (-) TimerEvent: {}
+[4.713726] (-) TimerEvent: {}
+[4.814069] (-) TimerEvent: {}
+[4.914417] (-) TimerEvent: {}
+[5.014737] (-) TimerEvent: {}
+[5.115083] (-) TimerEvent: {}
+[5.215427] (-) TimerEvent: {}
+[5.315774] (-) TimerEvent: {}
+[5.416146] (-) TimerEvent: {}
+[5.516588] (-) TimerEvent: {}
+[5.616938] (-) TimerEvent: {}
+[5.717298] (-) TimerEvent: {}
+[5.817648] (-) TimerEvent: {}
+[5.918028] (-) TimerEvent: {}
+[6.018372] (-) TimerEvent: {}
+[6.112440] (mypkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable mypkg\x1b[0m\n'}
+[6.118495] (-) TimerEvent: {}
+[6.218810] (-) TimerEvent: {}
+[6.319199] (-) TimerEvent: {}
+[6.419559] (-) TimerEvent: {}
+[6.519925] (-) TimerEvent: {}
+[6.620311] (-) TimerEvent: {}
+[6.682858] (mypkg) StdoutLine: {'line': b'[100%] Built target mypkg\n'}
+[6.694970] (mypkg) CommandEnded: {'returncode': 0}
+[6.720804] (mypkg) JobProgress: {'identifier': 'mypkg', 'progress': 'install'}
+[6.720903] (-) TimerEvent: {}
+[6.731089] (mypkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/morita/ros2_ws/build/mypkg'], 'cwd': '/home/morita/ros2_ws/build/mypkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'morita'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/morita'), ('OLDPWD', '/home/morita'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1921'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'morita'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'morita'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/morita-CFSV9-1:@/tmp/.ICE-unix/1719,unix/morita-CFSV9-1:/tmp/.ICE-unix/1719'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f59ded86_cd8f_4306_bcd8_8f51174fa5c7'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'ja_JP.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.QVCKD2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.109'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/morita/ros2_ws/build/mypkg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.739359] (mypkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.739663] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/lib/mypkg/mypkg\n'}
+[6.740196] (mypkg) StdoutLine: {'line': b'-- Set runtime path of "/home/morita/ros2_ws/install/mypkg/lib/mypkg/mypkg" to ""\n'}
+[6.740425] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/ament_index/resource_index/package_run_dependencies/mypkg\n'}
+[6.740646] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/ament_index/resource_index/parent_prefix_path/mypkg\n'}
+[6.740868] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/environment/ament_prefix_path.sh\n'}
+[6.741180] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/environment/ament_prefix_path.dsv\n'}
+[6.741285] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/environment/path.sh\n'}
+[6.741416] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/environment/path.dsv\n'}
+[6.741547] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/local_setup.bash\n'}
+[6.741628] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/local_setup.sh\n'}
+[6.741756] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/local_setup.zsh\n'}
+[6.741862] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/local_setup.dsv\n'}
+[6.741989] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/package.dsv\n'}
+[6.742172] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/ament_index/resource_index/packages/mypkg\n'}
+[6.742326] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/cmake/mypkgConfig.cmake\n'}
+[6.742449] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/cmake/mypkgConfig-version.cmake\n'}
+[6.742634] (mypkg) StdoutLine: {'line': b'-- Installing: /home/morita/ros2_ws/install/mypkg/share/mypkg/package.xml\n'}
+[6.744672] (mypkg) CommandEnded: {'returncode': 0}
+[6.821040] (-) TimerEvent: {}
+[6.877317] (mypkg) JobEnded: {'identifier': 'mypkg', 'rc': 0}
+[6.877968] (-) EventReactorShutdown: {}

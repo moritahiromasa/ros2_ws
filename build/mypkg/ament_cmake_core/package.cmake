@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "mypkg")
 set(mypkg_VERSION "0.0.1")
-set(mypkg_MAINTAINER "hiromasa morita <hirotamorimasa@gmail.com>")
+set(mypkg_MAINTAINER "morita hiromasa <morimasahirota@gmail.com>")
 set(mypkg_BUILD_DEPENDS "rclcpp" "std_msgs" "sensor_msgs" "image_transport" "OpenCV" "cv_bridge")
 set(mypkg_BUILDTOOL_DEPENDS "ament_cmake")
 set(mypkg_BUILD_EXPORT_DEPENDS "rclcpp" "std_msgs" "sensor_msgs" "image_transport" "OpenCV" "cv_bridge")
