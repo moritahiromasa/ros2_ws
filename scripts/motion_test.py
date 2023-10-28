@@ -33,15 +33,15 @@ def THETA_3( x, y, z):
 
 
 def InverseKinematics():
-	with open('/home/morita/ros2_ws/CSV/correct_plane.csv') as file:
+	with open('/home/morita/ros2_ws/CSV/correct_coordinate.csv') as file:
 		reader = csv.reader(file) # for文で行ごとのデータをリストで取得		
 		for row in reader:
 			x = float(row[0])
 			y = float(row[1])
 			z = float(row[2])
-			theta1 = THETA_1( float(x), float(y))
-			theta2 = THETA_2( float(x), float(y), z)
-			theta3 = THETA_3( float(x), float(y), z)
+			theta1 = THETA_1( x, y)
+			theta2 = THETA_2( x, y, z)
+			theta3 = THETA_3( x, y, z)
 		
 			degree1 = theta1*180/m.pi
 			degree2 = theta2*180/m.pi
