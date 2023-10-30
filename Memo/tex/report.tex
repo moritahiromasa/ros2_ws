@@ -44,13 +44,18 @@
 
 \section{システム構成}
 \subsection{Hardware}
-このシステムは画像処理、経路探索、機械の動作の３つの構成である.\\
-画像処理は線の経路を求めやすくするために行うもので、キャラクターの画像から平滑化、エッジ抽出、細線化などを行い線画を作成する. 
-\subsection{Image Processing}
-またその画像を元に経路を求め、そのときに取得した座標通りに機械に動かして描かせる.\\ 
 
-\subsection{画像処理の流れ}
-任意の一枚の画像を元に平滑化、エッジ抽出(ラプラシアンフィルタ)、鮮鋭化(4近傍)、細線化、端点検出、経路を求め、そして取得した座標を元に機械に描かせる.\\ 
+
+\subsection{Image Processing}
+前処理として任意の一枚の画像をガウシアンフィルタで平滑化、エッジ抽出、Zhang-Suenで細線化を行っている.\\ 
+エッジ抽出に関しては、OpenCVのガウシアンフィルやCannyで処理した後に細線化処理を施すと線が途切れたり、ノイズが現れてしまう.
+そこでCannyのエッジ検出器を向上させる"Enhanced Edge Detection Using SR-Guided Threshold Maneuvering and Window Mappinf: Haneding Broken Edges and Noisy Structures in Canny Edge"という論文とOpenCVのラプラシアンフィルタとCannyの3つを比較した.
+結果として、\underline{ooo}を用いることに決めた.
+後に3つの比較実験を示す.
+経路を辿るとき、2つの方法を考えた.
+一方は、左上から右下へ走査するラスタスキャンを用いる方法である.
+もう一方は、前処理で出力された画像から端点を検出し、端点を持つ線から描いていく方法である.
+理由は端点を持つ線から描くほうが人が描いたように見えると直感的に考えたからである.
 線の経路の求め方は、ある線の画素から隣に線の画素があるかを探して、移動してを繰り返すものとなっている.
 そのため、線を一本に単純化してある方が線をたどるのに容易であるため細線化を行う.
 
@@ -250,12 +255,13 @@ $$
 \section{参考文献}
 
 \begin{enumerate}
-\item \lbrack 1\rbrack \ Raspberry Piを利用した肖像画描画ロボット :$ \lceil Pankraz Piktograph \rfloor$ \\
-\item \lbrack 2\rbrack \ XDoG: An Xtended difference-of-Gaussians compendium \\
-\item \lbrack 3\rbrack \ ロボットによる描画行為の再現\\
-\item \lbrack 4\rbrack \ 出版:主婦の友社\ $\lceil \text{小河原智子の似顔絵入門} \rfloor$\\
-\item 広瀬\ 茂男\ 著\ 機械工学選書\ 裳華房\ ロボット工学-機械システムのベクトル解析-\\
-\item 細田\ 耕著\ 実践ロボット制御-基礎から動力学まで- \\
+\item \lbrack 1\rbrack \ Raspberry Piを利用した肖像画描画ロボット :$ \lceil Pankraz Piktograph \rfloor$ 
+\item \lbrack 2\rbrack \ XDoG: An Xtended difference-of-Gaussians compendium
+\item \lbrack 3\rbrack \ ロボットによる描画行為の再現
+\item \lbrack 4\rbrack \ 出版:主婦の友社\ $\lceil \text{小河原智子の似顔絵入門} \rfloor$
+\item 広瀬\ 茂男\ 著\ 機械工学選書\ 裳華房\ ロボット工学-機械システムのベクトル解析-
+\item 細田\ 耕著\ 実践ロボット制御-基礎から動力学まで-
+\item \ "Enhanced Edge Detection Using SR-Guided Threshold Maneuvering and Window Mapping: Haneding Broken Edges and Noisy Structures in Canny Edge"
 \end{enumerate}
 
 \end{multicols}
