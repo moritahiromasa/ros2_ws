@@ -33,8 +33,8 @@ def THETA_3( x, y, z):
 
 
 def InverseKinematics():
-	x = float(61)
-	y = float(61)
+	x = float(114)
+	y = float(117)
 	z = float(0)
 	# 各サーボのtheta1~3を求める
 	theta1 = THETA_1( x, y)

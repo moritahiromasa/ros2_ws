@@ -5,13 +5,13 @@
 \usepackage{amsmath, amssymb, amsfonts}
 
 
-\title{端点を持つ線から描くキャラクターの線画生成}
+\title{未タイトル}
 \author{学籍番号 20C1119 森田大雅}
 \date{\today}
 
 \begin{document}
 \maketitle % タイトルなどの出力
-\small
+\normalsize
 
 % \twocolumnは二段組ににしない文章
 
@@ -23,7 +23,7 @@
 
 \begin{multicols}{2} %二段組にする
 
-\section{導入}
+\section{introduction}
 描画ロボットにおいてプロッターやそれに似た機構で絵を描かせる研究や開発は多く見られるが、人の腕に似た機構であるロボットアームを用いて絵を描かせる研究はあまり存在しない.
 じつは現代の美術の人物などのデッサンにおいては輪郭を明確に描くやり方はあまり取らない.
 それは古典的なやり方で、昔の巨匠が実際そのように描くことは普通だった.
@@ -43,8 +43,10 @@
 理由は全体を描いてから、細部を描いた方が目や鼻の位置を定めやすいからである.
 
 \section{システム構成}
+\subsection{Hardware}
 このシステムは画像処理、経路探索、機械の動作の３つの構成である.\\
 画像処理は線の経路を求めやすくするために行うもので、キャラクターの画像から平滑化、エッジ抽出、細線化などを行い線画を作成する. 
+\subsection{Image Processing}
 またその画像を元に経路を求め、そのときに取得した座標通りに機械に動かして描かせる.\\ 
 
 \subsection{画像処理の流れ}
@@ -95,6 +97,7 @@
 \begin{multicols}{2} %二段組にする
 
 座標系0から3への座標変換行列 
+\small
 $$
 	^{0}T_{3}=^{0}T_{1} ^{1}T_{2} ^{2}T_{3} \\
 $$
@@ -111,7 +114,7 @@ $$
 		\right)
 	\end{array}
 \end{equation*}
-
+\normalsize
 ただし、
 \begin{equation*}
 	\left(
@@ -121,7 +124,7 @@ $$
 	\end{split}
 	\right)
 \end{equation*}
-
+\normalsize
 手先ベクトル
 \tiny
 \begin{equation*}
@@ -153,7 +156,7 @@ $$
 		\right)
 	\end{array}
 \end{equation*}
-\small
+\normalsize
 より手先までの座標変換行列$^{0}P_{r}$が以下のように求まる.
 \tiny
 \begin{equation*}
@@ -183,21 +186,60 @@ $$
 \end{equation*}
 これらの逆運動学を解くと
 \tiny
-\begin{equation*}
-\left\{
-	\begin{array}{c}
-	\begin{split}
-		&\theta_1=\frac{1}{2}cos^{-1}\biggl( \frac{x^2-y^2}{x^2+y^2} \biggr) \\
-		&\theta_2= cos^{-1}\biggl( \frac{x^2+y^2+(z-l1)^2+l_2^2-l_3^2-l_4^2}{2l_    2\sqrt{x^2+y^2+(z-l_1)^2}} \biggr)+tan^{-1}\biggl( \frac{\sqrt{x^2+y^2}}{z-l1}\biggr) \\
-		&\theta_3=cos^{-1}\biggl( \frac{x^2+y^2+(z-l1)^2-l_4^2-l_3^2-l_2^2}{2l_2    \sqrt{l_3^2+l_4^2}}\biggr)+tan^{-1}\biggl( \frac{-l_4}{l_3}\biggr)
-	\end{split}
-	\end{array}
-\right.
-\end{equation*}
+\begin{equation}
+	\left\{
+		\begin{array}{c}
+		\begin{split}
+			\theta_1&=\frac{1}{2}cos^{-1}\biggl( \frac{x^2-y^2}{x^2+y^2} \biggr) \\
+			\theta_2&= cos^{-1}\biggl( \frac{x^2+y^2+(z-l1)^2+l_2^2-l_3^2-l_4^2}{2l_    2\sqrt{x^2+y^2+(z-l_1)^2}} \biggr)\\
+			&\qquad\qquad+tan^{-1}\biggl( \frac{\sqrt{x^2+y^2}}{z-l1}\biggr) \\
+			\theta_3&=cos^{-1}\biggl( \frac{x^2+y^2+(z-l1)^2-l_4^2-l_3^2-l_2^2}{2l_2    \sqrt{l_3^2+l_4^2}}\biggr)\\
+			&\qquad\qquad+tan^{-1}\biggl( \frac{-l_4}{l_3}\biggr)\\
+		\end{split}
+		\end{array}
+	\right.
+\end{equation}
+\normalsize
+
+\section{手先の到達範囲}
+描画は第一象限で行うこととする.
+この条件と不等式にまとめると以下のようになる.
 \small
-
-
-
+\begin{equation*}
+	\left\{
+		\begin{array}{c}
+			\begin{split}
+				&0 \leqq \theta_1 \leqq \frac{\pi}{2} & \\
+				&x \geqq 0 \land y \geqq 0
+			\end{split}
+		\end{array}
+	\right.
+\end{equation*}
+\normalsize
+手先の最大到達点は
+\small
+\begin{equation*}
+	l_2+l_3=65+130=195
+\end{equation*}
+\normalsize
+また、第一象限に描きたいが、手先が一回転するのは避けたい.
+それはつまり、$\theta_2\geqq0\ (\land)\ \theta_3\geqq0$ということである.
+逆運動学解の$\theta_3$を用いると、$-1\leqq cos((\theta_3-\alpha)\leqq 1)$より
+\small
+\begin{equation*}
+	-2l_2\sqrt{l_3^2+l_4^4}-(z-l_1)^2+(l_4^2+l_3^2+l_2^2)\leqq x^2+y^2\leqq 195
+\end{equation*}
+$$
+	(\text{最左辺})=116.4208\cdots
+$$
+\normalsize
+よって求めたい手先の範囲は以下のようになる.
+\small
+\begin{equation*}
+	\therefore\ 117 \leqq x^2+y^2 \leqq 195
+\end{equation*}
+\normalsize
+	
 \section{実験}
 今回は端点を持つ線から描く場合と、ラスタスキャンで線の経路を求めた場合を比較し、より人らしい描き方の方を用いる.
 どちらが人のような描き方に近いかアンケートをx人にとる.
