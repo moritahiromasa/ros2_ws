@@ -75,15 +75,8 @@
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=65mm]{/home/morita/ros2_ws/Memo/tex/img/IMG_0025.PNG}
+\includegraphics[width=80mm]{/home/morita/ros2_ws/Memo/tex/img/IMG_0025.PNG}
 \caption{実機}
-\end{center}
-\end{figure}
-
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=65mm]{/home/morita/ros2_ws/Memo/tex/img/parameter.png}
-\caption{モデル図}
 \end{center}
 \end{figure}
 
@@ -94,7 +87,7 @@
 リンク座標系は以下のように定義する.
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=65mm]{/home/morita/ros2_ws/Memo/tex/img/link.png}
+\includegraphics[width=75mm]{/home/morita/ros2_ws/Memo/tex/img/link.png}
 \caption{リンク座標系}
 \end{center}
 \end{figure}
@@ -178,7 +171,7 @@ $$
 \end{equation*}
 \small
 そしてこの行列から手先の位置x, y, zは以下のように求まる.
-\begin{equation*}
+\begin{equation}
 	\left\{
 		\begin{array}{c}
 		\begin{split}
@@ -188,7 +181,7 @@ $$
 		\end{split}
 	\end{array}
 	\right.
-\end{equation*}
+\end{equation}
 これらの逆運動学を解くと
 \tiny
 \begin{equation}
@@ -246,6 +239,8 @@ $$
 \normalsize
 	
 \section{実験}
+\subsection{エッジ}
+\subsection{端点とラスタスキャン}
 今回は端点を持つ線から描く場合と、ラスタスキャンで線の経路を求めた場合を比較し、より人らしい描き方の方を用いる.
 どちらが人のような描き方に近いかアンケートをx人にとる.
 \section{出力結果}
