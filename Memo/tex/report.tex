@@ -1,6 +1,10 @@
-\documentclass[a4j]{jarticle}			% for platex
+\documentclass[a4j]{jarticle}			% a4jは10ptになっていた
 \usepackage[dvipdfmx]{graphicx}
+\usepackage{float}
+\usepackage{bm}
+\usepackage{url}
 \usepackage{multicol}
+\usepackage[superscript]{cite}
 \usepackage{mathtools}
 \usepackage{amsmath, amssymb, amsfonts}
 
@@ -10,16 +14,16 @@
 \date{\today}
 
 \begin{document}
-\maketitle % タイトルなどの出力
-\normalsize
+	\maketitle % タイトルなどの出力
+	\normalsize
 
-% \twocolumnは二段組ににしない文章
+	% \twocolumnは二段組ににしない文章
 
-\begin{abstract}
+	\begin{abstract}
 描画ロボットの研究において、輪郭$\lparen\text{エッジ}\rparen$抽出を行って鉛筆画やハッチング$\lbrack1\rbrack$、インクイラストなどの芸術表現に応用する研究$\lbrack2\rbrack$や機械に手順を示し、そのとおりに描かせる研究$\lbrack3\rbrack$が存在する.
 しかし、実際に$\lceil \text{人が描くような描き方} \rfloor$を追求したものは少ないと感じた.
 そこで、今回はキャラクターの画像から線画を描く、そしてできるだけ人が描いたような描き方をする描画ロボットを作成する.
-\end{abstract}
+	\end{abstract}
 
 \begin{multicols}{2} %二段組にする
 
