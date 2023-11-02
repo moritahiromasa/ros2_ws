@@ -1,0 +1,269 @@
+\documentclass[10pt]{jarticle}
+\usepackage{float}
+\usepackage{adrobo_abst}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{bm}
+\usepackage[superscript]{cite}
+\usepackage{enumerate}
+\usepackage{url}
+%\usepackage[absolute]{textpos}
+
+\renewcommand\citeform[1]{(#1)}
+
+\begin{document}
+    
+    \makeatletter
+    \doctype{2023年度卒業論文概要}
+    \title{論文の作成について}{（副題がある場合は括弧でくくる）}
+    \etitle{Making Research Paper}{($\bigcirc\bigcirc\bigcirc$)}
+    
+    \author{20C1119\hspace{.5zw}森田大雅}
+    \eauthor{Hiromasa Morita}
+    
+    \makeatother
+    
+    \abstract{When preparing the manuscript, read and observe carefully this sample as well as the instruction manual for the manuscript of the Transaction of Japan Society of Mechanical Engineers. This sample was prepared using MS-word. Character size of the English title is 14 pts of Times New Roman as well as sub-title. The name is 12 pts. The address of the first author and the abstract is 10 pts of Times New Roman. Character spacing of the abstract is narrowed by 0.2 pts preferably.}
+    
+    \keywords{Mechanical Engineering, Keywords List}
+    
+    \maketitle
+    
+    \supervisor{指導教員：藤江真也 教授}
+    
+    \section{導\hspace{2zw}入}%===========================
+	描画ロボットの研究において、輪郭抽出
+    
+    
+    
+    \section{システム構成}
+	\subsection{Hardware}
+
+	\subsection{Image Processing}
+	前処理として任意の一枚の画像をガウシアンフィルタで平滑化、エッジ抽出、Zhang-Suenで細線化を行っている.\\
+	エッジ抽出に関しては、OpenCVのガウシアンフィルやCannyで処理した後に細線化処理を施すと線が途切れたり、ノイズが現れてしまう.
+	そこでCannyのエッジ検出器を向上させる"Enhanced Edge Detection Using SR-Guided Threshold Maneuvering and Window Mappinf: Haneding Broken Edges and Noisy Structures in Canny Edge"という論文とOpenCVのラプラシアンフィルタとCannyの3つを比較した.
+	結果として、\underline{ooo}を用いることに決めた.
+	後に3つの比較実験を示す.
+	経路を辿るとき、2つの方法を考えた.
+	一方は、左上から右下へ走査するラスタスキャンを用いる方法である.
+	もう一方は、前処理で出力された画像から端点を検出し、端点を持つ線から描いていく方
+    法である.
+	理由は端点を持つ線から描くほうが人が描いたように見えると直感的に考えたからである
+    .
+	線の経路の求め方は、ある線の画素から隣に線の画素があるかを探して、移動してを繰り
+    返すものとなっている.
+	そのため、線を一本に単純化してある方が線をたどるのに容易であるため細線化を行う.
+	\subsection{端点を持つ線から描く理由}
+	端点を検出して描くのには2つの理由がある.
+	線画を生成する過程で繋がっているはずの線が途切れてしまうというのが一つの理由であ
+    る.
+	それは平滑化、エッジ抽出、細線化処理を施すからである.
+
+ 	\section{ロボットの機構}
+	本研究で用いるロボットは3軸のマニピュレータロボットである.
+	下の図1のようにアームの先端、姿勢の関節角を$\theta_1, \theta_2, \theta_3$、各リンクの長さ$l_1, l_2, l_3, l_4$とし、逆運動学問題を解く.
+	またリンク座標系を定める方法として、DH記法(Denavit-Hartenberg記法)を用いる.
+
+    \begin{center}
+        \begin{figure}[!b]
+            \includegraphics[width=0.45\textwidth]{/home/morita/ros2_ws/Memo/tex/img/IMG_0025.PNG}
+            \caption{実機}
+            \label{fig:sample-fig}
+        \end{figure}
+    \end{center}
+    
+	\section{手先の位置と回転角の関係}
+	運動学、逆運動学を用いて、ペン先の位置を各サーボモータの回転角を導出する.
+	リンク座標系は以下のように定義し、座標変換を行う.
+	
+	座標系1から3への座標変換行列は以下のようになる.
+    \begin{center}
+        \begin{figure}[!b]
+            \includegraphics[width=0.45\textwidth]{/home/morita/ros2_ws/Memo/tex/img/link.png}
+            \caption{リンク座標系:}
+            \label{fig:sample-fig}
+        \end{figure}
+    \end{center}
+$$
+	^{0}T_{3}=^{0}T_{1} ^{1}T_{2} ^{2}T_{3} \\
+$$
+	\begin{equation*}
+		\begin{array}{cc}
+			=
+			\left( 
+				\begin{array}{cccc}
+					C_1C_{23} & -C_1S_{23} & 0 & l_2C_1S_2 \\
+					S_1C_{23} & -S_1S_{23} & 0 & l_2S_1S_2 \\
+					-S{23} & -C_{23} & -1 & l_2C_2 + l_1 \\
+					0 & 0 & 0 & 1 
+				\end{array}
+			\right)
+		\end{array}
+	\end{equation*}
+	ただし、
+	\begin{equation*}
+		\left(
+		\begin{split}
+			C_{23} = cos\theta_2cos\theta_3-sin\theta_2sin\theta_3\\
+			S_{23} = sin\theta_2cos\theta_3+cos\theta_2sin\theta_3	
+		\end{split}
+		\right)
+	\end{equation*}
+    また手先ベクトルが以下のように求まる.
+
+	\begin{equation*}
+	\begin{array}{cccc}
+		&\left(
+			\begin{array}{cccc}
+				1 & 0 & 0 & l_4\\
+				0 & 1 & 0 & 0\\
+				0 & 0 & 1 & 0\\
+				0 & 0 & 0 & 1
+			\end{array}
+		\right)
+		\left(
+			\begin{array}{cccc}
+				1 & 0 & 0 & 0\\
+				0 & 1 & 0 & -l_3\\
+				0 & 0 & 1 & 0\\
+				0 & 0 & 0 & 1
+			\end{array}
+			\right)\\
+		&=
+		\left(
+		\begin{array}{cccc}
+			1 & 0 & 0 & l_4\\
+			0 & 1 & 0 & -l_3\\
+			0 & 0 & 1 & 0\\
+			0 & 0 & 0 & 1
+		\end{array}
+		\right)
+	\end{array}
+	\end{equation*}
+	
+	より手先までの座標変換行列$^{0}P_{r}$が以下のように求まる.
+	\begin{equation*}
+	\begin{array}{cc}
+		\left( 
+			\begin{array}{cccc}
+				C_1C_{23} & -C_1S_{23} & 0 & l_4C_1C_{23}+l_3C_1S_{23}+l_2C_1S_2 \\
+				S_1C_{23} & -S_1S_{23} & 0 & l_4S_1C_{23}+l_3S_1S_{23}+l_2S_1S_2 \\
+				-S{23} & -C_{23} & -1 & -l_4S_{23}+l_3C_{23}+l_2C_2+l_1 \\
+				0 & 0 & 0 & 1 
+			\end{array}
+		\right)
+	\end{array}
+	\end{equation*}
+
+	座標変換によって順運動学解が以下のように求まる.
+	そしてこの行列から手先の位置x, y, zは以下のように求まる.
+	\begin{equation}
+		\left\{
+			\begin{array}{c}
+			\begin{split}
+				&  x  =  C_1(l_4C_{23}  +  l_3S_{23}  +  l_2S_2)\quad \\
+				&  y  =  S_1(l_4C_{23}  +  l_3S_{23}  +  l_2S_2)\quad \\
+				&  z  -  l_1  =  -l_4S_{23}  +  l_3C_{23}  +  l_2C_2\quad \\
+			\end{split}
+		\end{array}
+		\right.
+	\end{equation}
+	これらの逆運動学を解くと
+	\begin{equation}
+		\left\{
+			\begin{array}{c}
+			\begin{split}
+				\theta_1  &  =\frac{1}{2}  cos^{-1}\biggl( \frac{x^2-y^2}{x^2+y^2} \biggr) \\
+				\theta_2  &  = cos^{-1}\biggl( \frac{x^2+y^2+(z-l1)^2  +  l_2^2-l_3^2-l_4^2}{2l_2\sqrt{x^2+y^2+(z-l_1)^2}} \biggr)\\
+				&\qquad\qquad  +  tan^{-1}\biggl( \frac{\sqrt{x^2+y^2}}{z-l1}\biggr) \\
+				\theta_3  &  =cos^{-1}\biggl( \frac{x^2+y^2+(z-l1)^2 - l_4^2-l_3^2-l_2^2}{2l_2\sqrt{l_3^2+l_4^2}}\biggr)\\
+				&\qquad\qquad + tan^{-1}\biggl( \frac{-l_4}{l_3}\biggr)\\
+			\end{split}
+			\end{array}
+		\right.
+	\end{equation}
+
+	\section{手先の到達範囲}
+	描画は第一象限で行う.
+	この条件と不等式にまとめると以下のようになる.
+	\begin{equation*}
+		\left\{
+			\begin{array}{c}
+				\begin{split}
+					&  0  \leqq  \theta_1  \leqq  \frac{\pi}{2}  &  \\
+					&  x  \geqq  0  \land  y  \geqq  0
+				\end{split}
+			\end{array}
+		\right.
+	\end{equation*}
+
+	手先の最大到達点は
+	\begin{equation*}
+		l_2+l_3  =  65+130  =  195
+	\end{equation*}
+	また、第一象限に描きたいが、手先が一回転するのは避けたい.
+	それはつまり、$  \theta_2  \geqq  0\  (\land)  \  \theta_3  \geqq0$ということである.
+	逆運動学解の$\theta_3$を用いると、$  -1  \leqq  cos((\theta_3  -  \alpha)  \leqq  1)$より
+	\begin{equation*}
+		-2l_2\sqrt{l_3^2+l_4^4}  - (z-l_1)^2  +  (l_4^2  +  l_3^2  +  l_2^2)  \leqq  x^2  +  y^2  \leqq  195
+	\end{equation*}
+	$$
+		(\text{最左辺})  =  116.4208  \cdots
+	$$
+	よって求めたい手先の範囲は以下のようになる.
+	\begin{equation*}
+		\therefore\  117  \leqq  x^2  +  y^2  \leqq  195
+	\end{equation*}
+
+	\section{微分運動学}
+	ロボット制御においてヤコビ行列は位置、姿勢と各関節の速度との関係を表す.
+	ooのために、順運動学で求めた位置、姿勢と各関節の速度との関係を求める.
+	これは式(1)の両辺を時間微分をし、それをベクトルの形に変形することで求められる.
+
+
+
+    
+    \section{引用文献の書き方}%===========================
+    本文中の引用箇所には，右肩に小括弧をつけて，通し番号を付ける．例えば，文献\cite{工大2005}や，文献\cite{Shibutani2004, Handbook1979, Kikuchi2017, Adrobo2019}のようにする．
+    
+    引用文献は，英文で記述されているもの（文献\cite{Shibutani2004}など）は英文で書き，本文末尾に引用順にまとめて書く．専門的な書籍（文献\cite{Handbook1979}など）についても引用しても良い．
+    Web上の資料を引用する場合，例えばオンラインジャーナルなどの場合は文献\cite{Kikuchi2017}のように，webページの場合は文献\cite{Adrobo2019}のように，それぞれ参考文献として記載して引用する．この時，URLとともに参照日を記載すること．ただし，webページの場合は個人の技術ブログなどのように第3者による十分な審査が行われていないものの引用は行ってはいけない．公的な機関が発行しているページであっても，その永続性の問題から必要最小限に留めることを推奨する．
+        
+    \section{結\hspace{2zw}言}%===========================
+    このスタイルファイル「adrobo\_abst.sty」は，千葉工業大学 未来ロボティクス学科の卒業研究概要として公式に提出可能なように，学科で配布するwordテンプレートとレイアウトなどの体裁を合わせたものである．
+    ただし，絶対的な出来上がりのレベルを保証するものではないため，執筆を進める上で不具合などが生じた場合は，直ちに製作者に通知をすることが望まれる．
+    また，使用者によるスタイルファイルの微調整などに関しては，自己責任の範囲において自由に行って良い．
+    
+    \vspace{5truemm}
+    {\footnotesize
+        \begin{thebibliography}{99}
+            
+            \bibitem{工大2005}
+            工大太郎: ``ロボットのしくみ'', 
+            日本機械学会論文誌A, 
+            Vol.~108, No.~1034 (2005), pp.~1--2.
+            
+            \bibitem{Shibutani2004}
+            Y. Shibutani: ``Heinrich's Law Resulted Pattern Dynamics --Part2--''，
+            Proceedings of the 79th Kansai Branch Regular Meeting of the Japan Society of Mechanical Engineers,  
+            No.~04--05 (2004), pp.~205--206.
+            
+            \bibitem{Handbook1979}
+            The Japan Society of Mechanical Engineers ed.: ``JSME Date Handbook: Heat Transfer'', 
+            (1979), p.~123, The Japan Society of Mechanical Engineers.
+            
+            \bibitem{Kikuchi2017}
+            K. Kikuchi, M. Miura, K. Shibata, J. Yamamura: ``Soft Landing Condition for Stair-climbing Robot with Hopping Mechanism'', 
+            Journal of JSDE, Vol.~53, No.~8 (2018), pp.~605--614, \url{https://doi.org/10.14953/jjsde.2017.2774}.
+            
+            \bibitem{Adrobo2019}
+            千葉工業大学 未来ロボティクス学科 学科概要: 
+            \url{http://www.robotics.it-chiba.ac.jp/ja/subject/index.html}， 
+            （参照日 2023年1月29日）. 
+            
+        \end{thebibliography}
+    }
+    \normalsize
+    
+\end{document}

@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.10.21)  1 NOV 2023 15:07
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.10.21)  1 NOV 2023 19:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**tmp.tex
-(./tmp.tex
+**test.tex
+(./test.tex
 pLaTeX2e <2021-11-15> (based on LaTeX2e <2021-11-15> patch level 1)
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/platex/base/jarticle.cls
@@ -173,8 +173,12 @@ File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
 \g__pdf_backend_link_int=\count277
 \g__pdf_backend_link_sf_int=\count278
 )
-(./tmp.aux)
-\openout1 = `tmp.aux'.
+(./test.aux
+
+LaTeX Warning: Label `fig:sample-fig' multiply defined.
+
+)
+\openout1 = `test.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
@@ -229,31 +233,67 @@ Overfull \hbox (8.53581pt too wide) in paragraph at lines 32--32
 [][][][] 
  []
 
-File: ./fig/sample.png Graphic file (type bmp)
-<./fig/sample.png>
+File: /home/morita/ros2_ws/Memo/tex/img/IMG_0025.PNG Graphic file (type bmp)
+</home/morita/ros2_ws/Memo/tex/img/IMG_0025.PNG>
+File: /home/morita/ros2_ws/Memo/tex/img/link.png Graphic file (type bmp)
+</home/morita/ros2_ws/Memo/tex/img/link.png>
 [1
 
 
 
 ]
-Underfull \hbox (badness 2384) in paragraph at lines 155--158
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 110.
+
+
+Underfull \vbox (badness 5533) has occurred while \output is active []
+
+
+Overfull \hbox (39.64961pt too wide) detected at line 157
+[]
+ []
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 168.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 182.
+
+
+Overfull \hbox (1.64804pt too wide) detected at line 185
+[][]
+ []
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 196.
+
+[2]
+Underfull \hbox (badness 2384) in paragraph at lines 248--251
 \OT1/cmr/m/n/8 nam-ics --Part2--''\JY1/mc/m/n/8 ， \OT1/cmr/m/n/8 Pro-ceed-ings
  of the 79th Kan-sai
  []
 
 
-Underfull \hbox (badness 2401) in paragraph at lines 164--166
+Underfull \hbox (badness 2401) in paragraph at lines 257--259
 \OT1/cmr/m/n/8 ``Soft Land-ing Con-di-tion for Stair-climbing Robot
  []
 
-[2] (./tmp.aux) ) 
+[3] (./test.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2732 strings out of 479850
- 39413 string characters out of 5887377
- 342950 words of memory out of 5000000
- 21020 multiletter control sequences out of 15000+600000
+ 2736 strings out of 479850
+ 39777 string characters out of 5887377
+ 355952 words of memory out of 5000000
+ 21022 multiletter control sequences out of 15000+600000
  489451 words of font info for 106 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 55i,10n,62p,503b,377s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,17n,62p,504b,377s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tmp.dvi (2 pages, 11840 bytes).
+Output written on test.dvi (3 pages, 18188 bytes).
