@@ -1,0 +1,11 @@
+Githubのセットアップ
+https://www.kagoya.jp/howto/it-glossary/develop/howtousegithub/
+
+ubuntuの日本語環境
+https://www.kagoya.jp/howto/it-glossary/develop/howtousegithub/
+
+slackのイントール
+https://slack.com/intl/ja-jp/blog/transformation/how-to-install-slack
+.debファイルの実行
+https://linuxfan.info/post-1881
+
