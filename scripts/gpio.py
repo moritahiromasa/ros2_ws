@@ -93,10 +93,12 @@ def InverseKinematics():
 			#print("servo1: {}, servo2: {}, servo3: {}".format(servo1_degree, servo2_degree, servo3_degree))
 
 			# 各サーボの制御角度を求める
+			if z == 10:
+				time.sleep(2.0)
 			pi.set_servo_pulsewidth( SERVO_PIN_1, servo1_degree ) # SERVO1はtheta1に相当
-			time.sleep( 0.2 )
+			time.sleep( 0.35 )
 			pi.set_servo_pulsewidth( SERVO_PIN_3, servo3_degree ) # SERVO2はtheta2に相当
-			time.sleep( 0.2 )
+			time.sleep( 0.35 )
 			pi.set_servo_pulsewidth( SERVO_PIN_2, servo2_degree ) # SERVO3はtheta3に相当
 			time.sleep( 0.4 )
 

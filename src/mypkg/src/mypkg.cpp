@@ -658,7 +658,7 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 	FILE* fp = fopen("/home/morita/ros2_ws/CSV/normal_coordinate.csv", "w");
 	FILE* gp = fopen("/home/morita/ros2_ws/CSV/correct_coordinate.csv", "w");
 	
-	string input_file = "/home/morita/ros2_ws/image/img14.png";
+	string input_file = "/home/morita/ros2_ws/image/img3.png";
 	Mat route_img = imread(input_file, IMREAD_COLOR);
 	
 	// 長方形の画像を正方形にリサイズ
@@ -921,7 +921,7 @@ int main(int argc, char** argv){
 	// 検出した座標を格納するための配列
 	int end_point[NUM][XY]; 
 	
-	string input_filename = "/home/morita/ros2_ws/image/img14.png";
+	string input_filename = "/home/morita/ros2_ws/image/img3.png";
 	string output_filename0 = "/home/morita/ros2_ws/image/output/mypkg/gaussian_laplacian.png";
 	string output_filename1 = "/home/morita/ros2_ws/image/output/mypkg/thinning.png";
 	string output_filename2 = "/home/morita/ros2_ws/image/output/mypkg/histogram.png";
@@ -998,7 +998,7 @@ int main(int argc, char** argv){
 		delete[] binaryImg[y];
 	delete[] binaryImg;
 
-	cout << "Completed. Route derived from img14.png and CSV file saved. " << endl;
+	cout << "Completed. Route derived from img3.png and CSV file saved. " << endl;
 
 	return 0;
 }

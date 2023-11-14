@@ -7,4 +7,4 @@ cd ~/ros2_setup_scripts.git
 ./setup.bash
 cd
 
-sudo apt-get install git vim curl unzip
+sudo apt-get install git vim curl unzip imagemagick
