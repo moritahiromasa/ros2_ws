@@ -16,3 +16,6 @@ https://slack.com/intl/ja-jp/blog/transformation/how-to-install-slack
 .debファイルの実行
 https://linuxfan.info/post-1881
 
+
+Latexのセットアップ
+https://www.aise.ics.saitama-u.ac.jp/~gotoh/TeXLiveUbuntu2204onWSL2.html

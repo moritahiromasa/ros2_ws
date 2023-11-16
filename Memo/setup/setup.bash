@@ -7,4 +7,5 @@ cd ~/ros2_setup_scripts.git
 ./setup.bash
 cd
 
-sudo apt-get install git vim curl unzip imagemagick
+sudo apt-get install git vim curl unzip imagemagick texlive-lang-japanese  texlive-latex-extra xdvik-ja evince
+
