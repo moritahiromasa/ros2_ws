@@ -1,0 +1,10 @@
+[01m[K/home/morita/ros2_ws/src/improved/src/improved.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/morita/ros2_ws/src/improved/src/improved.cpp:905:27:[m[K [01;31m[Kerror: [m[K‘[01m[KbinaryImg[m[K’ was not declared in this scope
+  905 |         create2DbinaryImg([01;31m[KbinaryImg[m[K, img); // 0, 1に2値化を行う関数
+      |                           [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/morita/ros2_ws/src/improved/src/improved.cpp:941:18:[m[K [01;31m[Kerror: [m[Ktype ‘[01m[K<type error>[m[K’ argument given to ‘[01m[Kdelete[m[K’, expected pointer
+  941 |         delete[] [01;31m[KbinaryImg[m[K;
+      |                  [01;31m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/improved.dir/build.make:76: CMakeFiles/improved.dir/src/improved.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/improved.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

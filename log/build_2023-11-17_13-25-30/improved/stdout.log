@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target improved[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/improved.dir/src/improved.cpp.o[0m
+[100%] [32m[1mLinking CXX executable improved[0m
+[100%] Built target improved
+-- Install configuration: ""
+-- Installing: /home/morita/ros2_ws/install/improved/lib/improved/improved
+-- Set runtime path of "/home/morita/ros2_ws/install/improved/lib/improved/improved" to ""
+-- Installing: /home/morita/ros2_ws/install/improved/share/ament_index/resource_index/package_run_dependencies/improved
+-- Installing: /home/morita/ros2_ws/install/improved/share/ament_index/resource_index/parent_prefix_path/improved
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/environment/ament_prefix_path.sh
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/environment/ament_prefix_path.dsv
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/environment/path.sh
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/environment/path.dsv
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/local_setup.bash
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/local_setup.sh
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/local_setup.zsh
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/local_setup.dsv
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/package.dsv
+-- Installing: /home/morita/ros2_ws/install/improved/share/ament_index/resource_index/packages/improved
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/cmake/improvedConfig.cmake
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/cmake/improvedConfig-version.cmake
+-- Installing: /home/morita/ros2_ws/install/improved/share/improved/package.xml

@@ -1,37 +1,27 @@
 import cv2
 import numpy as np
+from matplotlib import pyplot as plt
 
-# 表示
-def display_result_image(cap, color_image, skeleton):
-    colorimg = color_image.copy()
 
-    # カラー画像に細線化を合成
-    colorimg = colorimg // 2 + 127
-    colorimg[skeleton == 255] = 0
 
-    cv2.imshow(cap + '_skeleton', skeleton)
-    cv2.imshow(cap + '_color image', colorimg)
-    cv2.waitKey(0)
+# 入力画像の取得
+original_img = cv2.imread('/home/morita/ros2_ws/image/portrait7.jpg', 0)
+img = cv2.imread('/home/morita/ros2_ws/output/canny.jpg', 0)
 
-# 細線化
-def main():
-    # 入力画像の取得
-    colorimg = cv2.imread('handstand.png', cv2.IMREAD_COLOR)
 
-    # グレースケール変換
-    gray = cv2.cvtColor(colorimg, cv2.COLOR_BGR2GRAY)
-    _, gray = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+# 細線化(スケルトン化) THINNING_ZHANGSUEN
+skeleton1 = cv2.ximgproc.thinning(img, thinningType=cv2.ximgproc.THINNING_ZHANGSUEN)
+cv2.imwrite('/home/morita/ros2_ws/output/thinning_zhangsuen.jpg', skeleton1)
 
-    # 二値画像反転
-    image = cv2.bitwise_not(gray)
 
-    # 細線化(スケルトン化) THINNING_ZHANGSUEN
-    skeleton1   =   cv2.ximgproc.thinning(image, thinningType=cv2.ximgproc.THINNING_ZHANGSUEN)
-    display_result_image('ZHANGSUEN', colorimg, skeleton1)
+# 細線化(スケルトン化) THINNING_GUOHALL 
+skeleton2 = cv2.ximgproc.thinning(img, thinningType=cv2.ximgproc.THINNING_GUOHALL)
+cv2.imwrite('/home/morita/ros2_ws/output/thinning_ghouhall.jpg', skeleton2)
+	
 
-    # 細線化(スケルトン化) THINNING_GUOHALL 
-    skeleton2   =   cv2.ximgproc.thinning(image, thinningType=cv2.ximgproc.THINNING_GUOHALL)
-    display_result_image('GUOHALL', colorimg, skeleton2)
+plt.subplot(121),plt.imshow(original_img,cmap = 'gray')
+plt.title('Original Image'), plt.xticks([]), plt.yticks([])
+plt.subplot(122),plt.imshow(skeleton1,cmap = 'gray')
+plt.title('Thinned Image'), plt.xticks([]), plt.yticks([])
 
-if __name__ == '__main__':
-    main()
+plt.show()

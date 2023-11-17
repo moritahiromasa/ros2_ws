@@ -1,0 +1,11 @@
+[0.080s] Invoking command in '/home/morita/ros2_ws/build/improved': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/improved -- -j8 -l8
+[0.115s] [35m[1mConsolidate compiler generated dependencies of target improved[0m
+[0.132s] [ 50%] [32mBuilding CXX object CMakeFiles/improved.dir/src/improved.cpp.o[0m
+[3.110s] [01m[K/home/morita/ros2_ws/src/improved/src/improved.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[3.110s] [01m[K/home/morita/ros2_ws/src/improved/src/improved.cpp:928:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kthinned_Img[m[K’ was not declared in this scope
+[3.110s]   928 |         create2DbinaryImg(binaryImg, [01;31m[Kthinned_Img[m[K); // 0, 1に2値化を行う関数
+[3.110s]       |                                      [01;31m[K^~~~~~~~~~~[m[K
+[3.976s] gmake[2]: *** [CMakeFiles/improved.dir/build.make:76: CMakeFiles/improved.dir/src/improved.cpp.o] Error 1
+[3.976s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/improved.dir/all] Error 2
+[3.976s] gmake: *** [Makefile:146: all] Error 2
+[3.978s] Invoked command in '/home/morita/ros2_ws/build/improved' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/improved -- -j8 -l8

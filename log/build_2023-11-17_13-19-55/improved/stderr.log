@@ -1,0 +1,11 @@
+[01m[K/home/morita/ros2_ws/src/improved/src/improved.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/morita/ros2_ws/src/improved/src/improved.cpp:923:17:[m[K [01;31m[Kerror: [m[K‘[01m[Koutput_filename1[m[K’ was not declared in this scope; did you mean ‘[01m[Koutput_filename[m[K’?
+  923 |         imwrite([01;31m[Koutput_filename1[m[K, thinned_Img);
+      |                 [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                 [32m[Koutput_filename[m[K
+[01m[K/home/morita/ros2_ws/src/improved/src/improved.cpp:923:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kthinned_Img[m[K’ was not declared in this scope
+  923 |         imwrite(output_filename1, [01;31m[Kthinned_Img[m[K);
+      |                                   [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/improved.dir/build.make:76: CMakeFiles/improved.dir/src/improved.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/improved.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,2 @@
+Invoking command in '/home/morita/ros2_ws/build/improved': /usr/bin/cmake /home/morita/ros2_ws/src/improved -DCMAKE_INSTALL_PREFIX=/home/morita/ros2_ws/install/improved
+Invoked command in '/home/morita/ros2_ws/build/improved' returned '1': /usr/bin/cmake /home/morita/ros2_ws/src/improved -DCMAKE_INSTALL_PREFIX=/home/morita/ros2_ws/install/improved

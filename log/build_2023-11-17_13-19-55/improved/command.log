@@ -1,0 +1,4 @@
+Invoking command in '/home/morita/ros2_ws/build/improved': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/morita/ros2_ws/src/improved -DCMAKE_INSTALL_PREFIX=/home/morita/ros2_ws/install/improved
+Invoked command in '/home/morita/ros2_ws/build/improved' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/morita/ros2_ws/src/improved -DCMAKE_INSTALL_PREFIX=/home/morita/ros2_ws/install/improved
+Invoking command in '/home/morita/ros2_ws/build/improved': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/improved -- -j8 -l8
+Invoked command in '/home/morita/ros2_ws/build/improved' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/improved -- -j8 -l8
