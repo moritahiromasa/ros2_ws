@@ -1,0 +1,7 @@
+[01m[K/home/morita/ros2_ws/src/improved/src/improved.cpp:[m[K In function ‘[01m[Kvoid route_search(int*, int*, int*, int*, int*, int (*)[2], int**)[m[K’:
+[01m[K/home/morita/ros2_ws/src/improved/src/improved.cpp:635:21:[m[K [01;31m[Kerror: [m[K‘[01m[KImg_Resize[m[K’ was not declared in this scope
+  635 |         route_img = [01;31m[KImg_Resize[m[K(route_img);
+      |                     [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/improved.dir/build.make:76: CMakeFiles/improved.dir/src/improved.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/improved.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

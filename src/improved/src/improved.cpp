@@ -623,20 +623,6 @@ int xy_rotate(int xy){
 	return xy + 74;
 }
 
-Mat Img_Resize(Mat img){
-	// 長方形の画像を正方形にリサイズ
-	if(img.cols != img.rows){
-		if(img.cols < img.rows)	// タテ長の場合
-			resize(img, img, Size(), 64.0/ img.cols, 64.0/ img.cols);
-		else if(img.cols < img.rows) // ヨコ長の場合
-			resize(img, img, Size(), 64.0/ img.rows, 64.0/ img.rows);
-	}
-
-	if(img.cols > 64) 
-		resize(img, img, Size(), 64.0/ img.rows, 64.0/ img.rows);
-
-	return img;
-}
 
 void route_search(int* lines_count, int* one, int* two, int* count, int p[9], int point[NUM][XY], int** binaryImg){
 	FILE* fp = fopen("/home/morita/ros2_ws/CSV/normal_coordinate.csv", "w");
@@ -645,8 +631,6 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 	string input_file = "/home/morita/ros2_ws/output/canny.jpg";
 	Mat route_img = imread(input_file, IMREAD_COLOR);
 	
-	// 長方形の画像を正方形にリサイズ
-	route_img = Img_Resize(route_img);
 	
 	string output_file = "/home/morita/ros2_ws/output/route/img_0.jpg";
 	route_img.setTo(Scalar(255, 255, 255));
@@ -808,16 +792,13 @@ int main(int argc, char** argv){
 	// 検出した座標を格納するための配列
 	int end_point[NUM][XY]; 
 	
-	string input_filename = "/home/morita/ros2_ws/output/canny.jpg";
-	string output_filename = "/home/morita/ros2_ws/output/resize.jpg";
-	string output_filename1 = "/home/morita/ros2_ws/output/preResize.jpg";
+	string input_filename = "/home/morita/ros2_ws/output/thinning_zhangsuen.jpg";
 
 	Mat img = imread(input_filename, IMREAD_GRAYSCALE);
 	
 	if(img.empty())
 		cerr << "ERROR:Imge file not found." << endl;
 
-	//img = Img_Resize(img);
 	
 	::width = img.cols; //  x
 	::height = img.rows; // y
@@ -830,7 +811,7 @@ int main(int argc, char** argv){
 		binaryImg[y] = new int [width];
 	
 	create2DbinaryImg(binaryImg, img); // 0, 1に2値化を行う関数
-	print_binaryImg(binaryImg); // Print	
+	//print_binaryImg(binaryImg); // Print	
 	
 	// #### 端点の検出 ####
 	int count = 0;
