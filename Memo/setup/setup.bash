@@ -1,5 +1,6 @@
 sudo apt update
 
+ssh-keygen
 
 cd 
 git clone git@github.com:ryuichiueda/ros2_setup_scripts.git
@@ -7,5 +8,5 @@ cd ~/ros2_setup_scripts.git
 ./setup.bash
 cd
 
-sudo apt-get install git vim curl unzip imagemagick texlive-lang-japanese  texlive-latex-extra xdvik-ja evince
+sudo apt-get install git vim curl unzip imagemagick texlive-lang-japanese  texlive-latex-extra xdvik-ja evince ibus-mozc
 
