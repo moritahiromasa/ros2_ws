@@ -16,6 +16,12 @@ https://slack.com/intl/ja-jp/blog/transformation/how-to-install-slack
 .debファイルの実行
 https://linuxfan.info/post-1881
 
+研究室ネットワークの設定
+https://docs.google.com/document/d/1L2xXPNWyTcA9VNk-ngx319SuuENrEOBpuaDX06Tli6g/edit#heading=h.6z8skjdqp6iq
+
+学外から計算機に接続
+ssh -p 30611 morita@fujielab.org
+
 
 Latexのセットアップ
 https://www.aise.ics.saitama-u.ac.jp/~gotoh/TeXLiveUbuntu2204onWSL2.html
