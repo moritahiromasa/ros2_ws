@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 
 
 # 入力画像の取得
-original_img = cv2.imread('/home/morita/ros2_ws/image/portrait7.jpg', 0)
+original_img = cv2.imread('/home/morita/ros2_ws/image/portrait9.jpg', 0)
 img = cv2.imread('/home/morita/ros2_ws/output/canny.jpg', 0)
 
 
