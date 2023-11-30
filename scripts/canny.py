@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-img = cv2.imread('/home/morita/ros2_ws/image/portrait9.jpg',0)
+img = cv2.imread('/home/morita/ros2_ws/image/portrait7.jpg',0)
 
 height, width = img.shape[:2] # 画像の縦横サイズを取得
 
