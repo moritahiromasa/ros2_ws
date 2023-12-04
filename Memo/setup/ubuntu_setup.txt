@@ -25,3 +25,12 @@ ssh -p 30611 morita@fujielab.org
 
 Latexのセットアップ
 https://www.aise.ics.saitama-u.ac.jp/~gotoh/TeXLiveUbuntu2204onWSL2.html
+
+Gif
+http://www.protein.osaka-u.ac.jp/rcsfp/supracryst/suzuki/jpxtal/Katsutani/gif1.php
+
+アニメーションGIFの作成
+convert -delay 5 -loop 0 frame_*.png movie.gif
+
+Shoteellのインストール
+https://ubunlog.com/ja/shotwell-0-32-0-llega-con-mejoras-de-soporte-reconocimiento-y-mas/
