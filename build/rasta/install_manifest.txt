@@ -1,0 +1,16 @@
+/home/morita/ros2_ws/install/rasta/lib/rasta/rasta
+/home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/package_run_dependencies/rasta
+/home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/parent_prefix_path/rasta
+/home/morita/ros2_ws/install/rasta/share/rasta/environment/ament_prefix_path.sh
+/home/morita/ros2_ws/install/rasta/share/rasta/environment/ament_prefix_path.dsv
+/home/morita/ros2_ws/install/rasta/share/rasta/environment/path.sh
+/home/morita/ros2_ws/install/rasta/share/rasta/environment/path.dsv
+/home/morita/ros2_ws/install/rasta/share/rasta/local_setup.bash
+/home/morita/ros2_ws/install/rasta/share/rasta/local_setup.sh
+/home/morita/ros2_ws/install/rasta/share/rasta/local_setup.zsh
+/home/morita/ros2_ws/install/rasta/share/rasta/local_setup.dsv
+/home/morita/ros2_ws/install/rasta/share/rasta/package.dsv
+/home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/packages/rasta
+/home/morita/ros2_ws/install/rasta/share/rasta/cmake/rastaConfig.cmake
+/home/morita/ros2_ws/install/rasta/share/rasta/cmake/rastaConfig-version.cmake
+/home/morita/ros2_ws/install/rasta/share/rasta/package.xml

@@ -1,0 +1,14 @@
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:30:32:[m[K [01;31m[Kerror: [m[Koverloaded function with no contextual type information
+   30 |         size = int(img.cols / 4[01;31m[K)[m[K;
+      |                                [01;31m[K^[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:31:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kx[m[K’ was not declared in this scope
+   31 |         [01;31m[Kx[m[K = (img.cols / 2) / 3;
+      |         [01;31m[K^[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:32:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ky[m[K’ was not declared in this scope; did you mean ‘[01m[Kyn[m[K’?
+   32 |         [01;31m[Ky[m[K = size;
+      |         [01;31m[K^[m[K
+      |         [32m[Kyn[m[K
+gmake[2]: *** [CMakeFiles/rectangletest.dir/build.make:76: CMakeFiles/rectangletest.dir/src/rectangletest.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/rectangletest.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

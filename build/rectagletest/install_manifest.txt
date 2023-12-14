@@ -1,0 +1,16 @@
+/home/morita/ros2_ws/install/rectagletest/lib/rectagletest/rectangletest
+/home/morita/ros2_ws/install/rectagletest/share/ament_index/resource_index/package_run_dependencies/rectagletest
+/home/morita/ros2_ws/install/rectagletest/share/ament_index/resource_index/parent_prefix_path/rectagletest
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/environment/ament_prefix_path.sh
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/environment/ament_prefix_path.dsv
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/environment/path.sh
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/environment/path.dsv
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/local_setup.bash
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/local_setup.sh
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/local_setup.zsh
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/local_setup.dsv
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/package.dsv
+/home/morita/ros2_ws/install/rectagletest/share/ament_index/resource_index/packages/rectagletest
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/cmake/rectagletestConfig.cmake
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/cmake/rectagletestConfig-version.cmake
+/home/morita/ros2_ws/install/rectagletest/share/rectagletest/package.xml

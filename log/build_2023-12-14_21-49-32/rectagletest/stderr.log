@@ -1,0 +1,103 @@
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:6:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ was not declared in this scope
+    6 |         [01;31m[Kstring[m[K input_file = "/home/morita/ros2_ws/output/canny.jpg";
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:6:9:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/11/string:39[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/cvstd.hpp:56[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/base.hpp:58[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core.hpp:53[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stringfwd.h:79:33:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::string[m[K’
+   79 |   typedef basic_string<char>    [01;36m[Kstring[m[K;
+      |                                 [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core/cvstd.hpp:56[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/base.hpp:58[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core.hpp:53[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:1[m[K:
+[01m[K/usr/include/c++/11/string:67:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::pmr::string[m[K’
+   67 |     using [01;36m[Kstring[m[K    = basic_string<char>;
+      |           [01;36m[K^~~~~~[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:7:15:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Koutput_file[m[K’
+    7 |         string[01;31m[K [m[K[32m[Koutput_file[m[K = "/home/morita/ros2_ws/output/rectangle.jpg";
+      |               [01;31m[K^[m[K[32m[K~~~~~~~~~~~[m[K
+      |               [32m[K;[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:9:9:[m[K [01;31m[Kerror: [m[K‘[01m[KMat[m[K’ was not declared in this scope; did you mean ‘[01m[Kcv::Mat[m[K’?
+    9 |         [01;31m[KMat[m[K img = imread(input_file, IMREAD_COLOR);
+      |         [01;31m[K^~~[m[K
+      |         [32m[Kcv::Mat[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:801:18:[m[K [01;36m[Knote: [m[K‘[01m[Kcv::Mat[m[K’ declared here
+  801 | class CV_EXPORTS [01;36m[KMat[m[K
+      |                  [01;36m[K^~~[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:11:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksize[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::size[m[K’?
+   11 |         [01;31m[Ksize[m[K = int(img.cols / 4);
+      |         [01;31m[K^~~~[m[K
+      |         [32m[Kstd::size[m[K
+In file included from [01m[K/usr/include/c++/11/array:41[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/cvdef.h:779[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core.hpp:52[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/range_access.h:254:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::size[m[K’ declared here
+  254 |     [01;36m[Ksize[m[K(const _Tp (&)[_Nm]) noexcept
+      |     [01;36m[K^~~~[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:11:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kimg[m[K’ was not declared in this scope
+   11 |         size = int([01;31m[Kimg[m[K.cols / 4);
+      |                    [01;31m[K^~~[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:12:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kx[m[K’ was not declared in this scope
+   12 |         [01;31m[Kx[m[K = (img.cols / 2) / 3;
+      |         [01;31m[K^[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:13:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ky[m[K’ was not declared in this scope; did you mean ‘[01m[Kyn[m[K’?
+   13 |         [01;31m[Ky[m[K = size;
+      |         [01;31m[K^[m[K
+      |         [32m[Kyn[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:16:24:[m[K [01;31m[Kerror: [m[K‘[01m[KPoint[m[K’ was not declared in this scope; did you mean ‘[01m[Kcv::Point[m[K’?
+   16 |         rectangle(img, [01;31m[KPoint[m[K(x, y), Point(x + size, y + size), Scalar(0,0,255), 3);
+      |                        [01;31m[K^~~~~[m[K
+      |                        [32m[Kcv::Point[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:57[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/types.hpp:198:17:[m[K [01;36m[Knote: [m[K‘[01m[Kcv::Point[m[K’ declared here
+  198 | typedef Point2i [01;36m[KPoint[m[K;
+      |                 [01;36m[K^~~~~[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:16:64:[m[K [01;31m[Kerror: [m[K‘[01m[KScalar[m[K’ was not declared in this scope; did you mean ‘[01m[Kcv::Scalar[m[K’?
+   16 |         rectangle(img, Point(x, y), Point(x + size, y + size), [01;31m[KScalar[m[K(0,0,255), 3);
+      |                                                                [01;31m[K^~~~~~[m[K
+      |                                                                [32m[Kcv::Scalar[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:57[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+                 from [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/types.hpp:685:25:[m[K [01;36m[Knote: [m[K‘[01m[Kcv::Scalar[m[K’ declared here
+  685 | typedef Scalar_<double> [01;36m[KScalar[m[K;
+      |                         [01;36m[K^~~~~~[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:16:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krectangle[m[K’ was not declared in this scope; did you mean ‘[01m[Kcv::rectangle[m[K’?
+   16 |         [01;31m[Krectangle[m[K(img, Point(x, y), Point(x + size, y + size), Scalar(0,0,255), 3);
+      |         [01;31m[K^~~~~~~~~[m[K
+      |         [32m[Kcv::rectangle[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:74[m[K,
+                 from [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/imgproc.hpp:4441:19:[m[K [01;36m[Knote: [m[K‘[01m[Kcv::rectangle[m[K’ declared here
+ 4441 | CV_EXPORTS_W void [01;36m[Krectangle[m[K(InputOutputArray img, Rect rec,
+      |                   [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:18:17:[m[K [01;31m[Kerror: [m[K‘[01m[Koutput_file[m[K’ was not declared in this scope
+   18 |         imwrite([01;31m[Koutput_file[m[K, img);
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:18:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kimwrite[m[K’ was not declared in this scope; did you mean ‘[01m[Kcv::imwrite[m[K’?
+   18 |         [01;31m[Kimwrite[m[K(output_file, img);
+      |         [01;31m[K^~~~~~~[m[K
+      |         [32m[Kcv::imwrite[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/highgui.hpp:48[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:68[m[K,
+                 from [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/imgcodecs.hpp:267:19:[m[K [01;36m[Knote: [m[K‘[01m[Kcv::imwrite[m[K’ declared here
+  267 | CV_EXPORTS_W bool [01;36m[Kimwrite[m[K( const String& filename, InputArray img,
+      |                   [01;36m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/rectangletest.dir/build.make:76: CMakeFiles/rectangletest.dir/src/rectangletest.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/rectangletest.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

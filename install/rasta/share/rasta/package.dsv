@@ -1,0 +1,8 @@
+source;share/rasta/hook/cmake_prefix_path.ps1
+source;share/rasta/hook/cmake_prefix_path.dsv
+source;share/rasta/hook/cmake_prefix_path.sh
+source;share/rasta/local_setup.bash
+source;share/rasta/local_setup.dsv
+source;share/rasta/local_setup.ps1
+source;share/rasta/local_setup.sh
+source;share/rasta/local_setup.zsh

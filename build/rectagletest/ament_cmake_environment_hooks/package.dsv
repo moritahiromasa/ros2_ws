@@ -1,0 +1,4 @@
+source;share/rectagletest/local_setup.bash
+source;share/rectagletest/local_setup.dsv
+source;share/rectagletest/local_setup.sh
+source;share/rectagletest/local_setup.zsh

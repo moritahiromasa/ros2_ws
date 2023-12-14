@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-img = cv2.imread('/home/morita/ros2_ws/image/portrait7.jpg',0)
+img = cv2.imread('/home/morita/ros2_ws/image/portrait9.jpg',0)
 
 height, width = img.shape[:2] # 画像の縦横サイズを取得
 
@@ -33,7 +33,7 @@ max_val = int(max(255, (1.0 + sigma) * med_val))
 edges = cv2.Canny(padding_img, threshold1 = min_val, threshold2 = max_val)
 _, gray = cv2.threshold(padding_img, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
  
-cv2.imwrite('/home/morita/ros2_ws/output/canny.jpg', edges)
+cv2.imwrite('/home/morita/ros2_ws/output/portrait09.jpg', edges)
 
 
 plt.subplot(121),plt.imshow(img,cmap = 'gray')

@@ -1,0 +1,4 @@
+source;share/rasta/local_setup.bash
+source;share/rasta/local_setup.dsv
+source;share/rasta/local_setup.sh
+source;share/rasta/local_setup.zsh

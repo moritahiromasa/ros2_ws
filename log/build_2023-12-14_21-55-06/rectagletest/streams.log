@@ -1,0 +1,14 @@
+[0.062s] Invoking command in '/home/morita/ros2_ws/build/rectagletest': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/rectagletest -- -j8 -l8
+[0.100s] [35m[1mConsolidate compiler generated dependencies of target rectangletest[0m
+[0.120s] [ 50%] [32mBuilding CXX object CMakeFiles/rectangletest.dir/src/rectangletest.cpp.o[0m
+[3.137s] [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[3.137s] [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:24:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kargc[m[K’ was not declared in this scope
+[3.137s]    24 |         rclcpp::init([01;31m[Kargc[m[K, argv);
+[3.138s]       |                      [01;31m[K^~~~[m[K
+[3.144s] [01m[K/home/morita/ros2_ws/src/rectagletest/src/rectangletest.cpp:24:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kargv[m[K’ was not declared in this scope
+[3.144s]    24 |         rclcpp::init(argc, [01;31m[Kargv[m[K);
+[3.144s]       |                            [01;31m[K^~~~[m[K
+[3.913s] gmake[2]: *** [CMakeFiles/rectangletest.dir/build.make:76: CMakeFiles/rectangletest.dir/src/rectangletest.cpp.o] Error 1
+[3.913s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/rectangletest.dir/all] Error 2
+[3.913s] gmake: *** [Makefile:146: all] Error 2
+[3.915s] Invoked command in '/home/morita/ros2_ws/build/rectagletest' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/rectagletest -- -j8 -l8

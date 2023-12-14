@@ -1,0 +1,10 @@
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K In function ‘[01m[Kvoid Decide_startPoint(cv::Mat, int*, int*, int**)[m[K’:
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:84:1:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K/[m[K’ token
+   84 | [01;31m[K/[m[K                       }
+      | [01;31m[K^[m[K
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:84:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K}[m[K’ token
+   84 | /                       [01;31m[K}[m[K
+      |                         [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/mypkg.dir/build.make:76: CMakeFiles/mypkg.dir/src/mypkg.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mypkg.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

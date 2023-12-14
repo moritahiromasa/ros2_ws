@@ -1,0 +1,14 @@
+[0.105s] Invoking command in '/home/morita/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/mypkg -- -j8 -l8
+[0.142s] [35m[1mConsolidate compiler generated dependencies of target mypkg[0m
+[0.159s] [ 50%] [32mBuilding CXX object CMakeFiles/mypkg.dir/src/mypkg.cpp.o[0m
+[3.169s] [01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K In function ‘[01m[Kvoid route_search(int*, int*, int*, int*, int*, int (*)[2], int*, int**)[m[K’:
+[3.170s] [01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:722:49:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+[3.170s]   722 |         cout << "(x, y)= " << start_point[0] << [01;31m[K,[m[K << start_point[1]<< endl;
+[3.170s]       |                                                 [01;31m[K^[m[K
+[3.170s] [01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:722:51:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K<<[m[K’ token
+[3.170s]   722 |         cout << "(x, y)= " << start_point[0] << , [01;31m[K<<[m[K start_point[1]<< endl;
+[3.170s]       |                                                   [01;31m[K^~[m[K
+[4.010s] gmake[2]: *** [CMakeFiles/mypkg.dir/build.make:76: CMakeFiles/mypkg.dir/src/mypkg.cpp.o] Error 1
+[4.010s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mypkg.dir/all] Error 2
+[4.010s] gmake: *** [Makefile:146: all] Error 2
+[4.013s] Invoked command in '/home/morita/ros2_ws/build/mypkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/mypkg -- -j8 -l8

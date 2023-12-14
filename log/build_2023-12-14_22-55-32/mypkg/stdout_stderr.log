@@ -1,0 +1,32 @@
+[35m[1mConsolidate compiler generated dependencies of target mypkg[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/mypkg.dir/src/mypkg.cpp.o[0m
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K In function ‘[01m[Kvoid route_search(int*, int*, int*, int*, int*, int (*)[2], int*, int**)[m[K’:
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:719:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kn[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  719 |                         int [01;35m[Kn[m[K = i;
+      |                             [01;35m[K^[m[K
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:720:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ was not declared in this scope
+  720 |         cout << "array number is " << [01;31m[Kn[m[K << endl;
+      |                                       [01;31m[K^[m[K
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:904:45:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kint*[m[K’ to ‘[01m[Kint**[m[K’
+  904 |         find_endPoint(&count, p, end_point, [01;31m[Kstart_point[m[K, binaryImg);
+      |                                             [01;31m[K^~~~~~~~~~~[m[K
+      |                                             [01;31m[K|[m[K
+      |                                             [01;31m[Kint*[m[K
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:123:72:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid find_endPoint(int*, int*, int (*)[2], int**)[m[K’
+  123 | find_endPoint(int *count, int p[9], int end_point[NUM][XY], [01;36m[Kint** binaryImg[m[K){
+      |                                                             [01;36m[K~~~~~~^~~~~~~~~[m[K
+
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:913:84:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kint**[m[K’ to ‘[01m[Kint*[m[K’
+  913 | rch(&lines_count, &one_before, &two_before, &count, p, end_point, [01;31m[KbinaryImg[m[K);
+      |                                                                   [01;31m[K^~~~~~~~~[m[K
+      |                                                                   [01;31m[K|[m[K
+      |                                                                   [01;31m[Kint**[m[K
+
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:697:103:[m[K [01;36m[Knote: [m[K  initializing argument 7 of ‘[01m[Kvoid route_search(int*, int*, int*, int*, int*, int (*)[2], int*, int**)[m[K’
+  697 | int* one, int* two, int* count, int p[9], int point[NUM][XY], [01;36m[Kint start_point[XY][m[K, int** binaryImg){
+      |                                                               [01;36m[K~~~~^~~~~~~~~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/mypkg.dir/build.make:76: CMakeFiles/mypkg.dir/src/mypkg.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mypkg.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

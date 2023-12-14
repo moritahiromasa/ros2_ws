@@ -65,23 +65,61 @@ void kernel(int x, int y, int p[9], int** binaryImg){
 	p[7] = binaryImg[y][x-1];
 	p[8] = binaryImg[y-1][x-1];
 }
-/*
-void kernels_5x5(int x, int y, int p[25], int** binaryImg){
-	p[0] = binaryImg[y][x];	
-	p[1] = binaryImg[y-2][x-2];		p[2] = binaryImg[y-2][x-1];
-	p[3] = binaryImg[y-2][x];		p[4] = binaryImg[y-2][x+1];
-	p[5] = binaryImg[y-2][x+2];		p[6] = binaryImg[y-1][x-2];
-	p[7] = binaryImg[y-1][x-1];		p[8] = binaryImg[y-1][x];
-	p[9] = binaryImg[y-1][x+1];		p[10] = binaryImg[y-1][x+2];
-	p[11] = binaryImg[y][x-2];	p[12] = binaryImg[y][x-1];
-	p[13] = binaryImg[y][x+1];	p[14] = binaryImg[y][x+2];
-	p[15] = binaryImg[y+1][x-2];	p[16] = binaryImg[y+1][x-1];
-	p[17] = binaryImg[y+1][x];	p[18] = binaryImg[y+1][x+1];
-	p[19] = binaryImg[y+1][x+2];	p[20] = binaryImg[y+2][x-2];
-	p[21] = binaryImg[y+2][x-1];	p[22] = binaryImg[y+2][x];
-	p[23] = binaryImg[y+2][x+1];	p[24] = binaryImg[y+2][x+2];
+
+
+void Decide_startPoint(Mat img, int p[9], int start_point[XY], int** binaryImg){
+	int size = int(img.cols / 4);
+	int point_x = img.cols / 8;
+	int point_y = img.rows / 3;
+
+	// 見つけた時点でreturnする
+	for(int x = point_x; x < point_x + size; x++){
+		for(int y = point_y; y < point_y + size; y++){
+			kernel(x, y, p, binaryImg);
+			
+			if( (p[0]+p[5] == 0 ) && (p[1]*p[2]*p[3]*p[7]*p[8] == 1) ){
+				start_point[0] = y;
+				start_point[1] = x;
+				return;
+			}
+			else if( (p[0]+p[7] == 0 ) && (p[1]*p[2]*p[3]*p[4]*p[5] == 1) ){
+				start_point[0] = y;
+				start_point[1] = x;
+				return;
+			}
+			else if( (p[0]+p[1] == 0 ) && (p[3]*p[4]*p[5]*p[6]*p[7] == 1) ){
+				start_point[0] = y;
+				start_point[1] = x;
+				return;
+			}
+			else if( (p[0]+p[3] == 0 ) && (p[5]*p[6]*p[7]*p[8]*p[1] == 1) ){
+				start_point[0] = y;
+				start_point[1] = x;
+				return;
+			}
+			else if( (p[0]+p[6] == 0 ) && (p[1]*p[2]*p[3]*p[4]*p[5]*p[7]*p[8] == 1) ){
+				start_point[0] = y;
+				start_point[1] = x;
+				return;
+			}
+			else if( (p[0]+p[8] == 0 ) && (p[1]*p[2]*p[3]*p[4]*p[5]*p[6]*p[7] == 1) ){
+				start_point[0] = y;
+				start_point[1] = x;
+				return;
+			}
+			else if( (p[0]+p[2] == 0 ) && (p[1]*p[3]*p[4]*p[5]*p[6]*p[7]*p[8] == 1) ){
+				start_point[0] = y;
+				start_point[1] = x;
+				return;
+			}
+			else if( (p[0]+p[4] == 0 ) && (p[1]*p[2]*p[3]*p[5]*p[6]*p[7]*p[8] == 1) ){
+				start_point[0] = y;
+				start_point[1] = x;
+				return;
+			}
+		}
+	}
 }
-*/
 void find_endPoint(int *count, int p[9], int end_point[NUM][XY], int** binaryImg){
 	for(int y = 1; y < height-1; y++){
 		for(int x = 1; x < width-1; x++){
@@ -170,6 +208,8 @@ void find_endPoint(int *count, int p[9], int end_point[NUM][XY], int** binaryImg
 		}
 	}
 }
+
+
 void first(int p[9], int* x_pixels, int* y_pixels, int* one_before){
 	if(p[1] == 0){
 		*one_before = 5;	*y_pixels -= 1;
@@ -654,7 +694,7 @@ Mat Img_Resize(Mat img){
 	return img;
 }
 
-void route_search(int* lines_count, int* one, int* two, int* count, int p[9], int point[NUM][XY], int** binaryImg){
+void route_search(int* lines_count, int* one, int* two, int* count, int p[9], int point[NUM][XY], int start_point[XY], int** binaryImg){
 	FILE* fp = fopen("/home/morita/ros2_ws/CSV/normal_coordinate.csv", "w");
 	FILE* gp = fopen("/home/morita/ros2_ws/CSV/correct_coordinate.csv", "w");
 	
@@ -664,13 +704,23 @@ void route_search(int* lines_count, int* one, int* two, int* count, int p[9], in
 	// 長方形の画像を正方形にリサイズ
 	route_img = Img_Resize(route_img);
 	
+	
 	string output_file = "/home/morita/ros2_ws/output/route/route_0.jpg";
 	route_img.setTo(Scalar(255, 255, 255));
 	imwrite(output_file, route_img);
 	
 	srand(static_cast<unsigned int>(time(nullptr)));
 
-	int n = rand() % (*count); // 最初の端点、スタート位置, または次の端点の位置を決める
+	
+
+	// 最初の端点、スタート位置, または次の端点の位置を決める
+	int n;
+	for(int i = 0; i < *count; i++)
+		if(point[i][0] == start_point[0] && point[i][1] == start_point[1])
+			n = i;
+	cout << "array number is " << n << endl;
+	cout << "(x, y)= " << start_point[0] << "," << start_point[1]<< endl;
+	// int n = rand() % (*count); // 最初の端点、スタート位置, または次の端点の位置を決める
 	int x_pixels, y_pixels, z_pixels; // 注目画素を格納する変数
 	int one_before = *one, two_before = *two;
 	int old_x_pixels, old_y_pixels;
@@ -822,6 +872,7 @@ int main(int argc, char** argv){
 	int p[9];
 	// 検出した座標を格納するための配列
 	int end_point[NUM][XY]; 
+	int start_point[XY]; // スタート地点と決める配列
 	
 	string input_filename = "/home/morita/ros2_ws/output/canny.jpg";
 
@@ -845,6 +896,10 @@ int main(int argc, char** argv){
 	create2DbinaryImg(binaryImg, img); // 0, 1に2値化を行う関数
 	//print_binaryImg(binaryImg); // Print	
 	
+	// #### スタート地点の決定  ####
+	Decide_startPoint(img, p, start_point, binaryImg);
+
+
 	// #### 端点の検出 ####
 	int count = 0;
 	
@@ -857,7 +912,7 @@ int main(int argc, char** argv){
 	int one_before, two_before = -1; // 3x3のカーネル内で一つ前と２つ前の画素の位置
 	int lines_count; // 線の本数をカウントするための変数
 	cout << "############################################" << endl;
-	route_search(&lines_count, &one_before, &two_before, &count, p, end_point, binaryImg);
+	route_search(&lines_count, &one_before, &two_before, &count, p, end_point, start_point, binaryImg);
 	
 
 	// 動的に確保した配列を解放

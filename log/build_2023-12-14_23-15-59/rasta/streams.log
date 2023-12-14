@@ -1,0 +1,61 @@
+[0.132s] Invoking command in '/home/morita/ros2_ws/build/rasta': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/morita/ros2_ws/src/rasta -DCMAKE_INSTALL_PREFIX=/home/morita/ros2_ws/install/rasta
+[0.189s] -- The C compiler identification is GNU 11.4.0
+[0.257s] -- The CXX compiler identification is GNU 11.4.0
+[0.267s] -- Detecting C compiler ABI info
+[0.334s] -- Detecting C compiler ABI info - done
+[0.349s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.350s] -- Detecting C compile features
+[0.350s] -- Detecting C compile features - done
+[0.355s] -- Detecting CXX compiler ABI info
+[0.432s] -- Detecting CXX compiler ABI info - done
+[0.440s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.440s] -- Detecting CXX compile features
+[0.441s] -- Detecting CXX compile features - done
+[0.444s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.626s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.717s] -- Found rclcpp: 16.0.7 (/opt/ros/humble/share/rclcpp/cmake)
+[0.760s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.765s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.774s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.789s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.810s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.891s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.893s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.987s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.011s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.056s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.065s] -- Looking for pthread.h
+[1.130s] -- Looking for pthread.h - found
+[1.130s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.196s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.197s] -- Found Threads: TRUE  
+[1.370s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.511s] -- Found image_transport: 3.1.7 (/opt/ros/humble/share/image_transport/cmake)
+[1.561s] -- Found OpenCV: /usr (found version "4.5.4") 
+[1.562s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[1.575s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.650s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.651s] -- Configured cppcheck include dirs: 
+[1.651s] -- Configured cppcheck exclude dirs and/or files: 
+[1.651s] -- Added test 'lint_cmake' to check CMake code style
+[1.652s] -- Added test 'uncrustify' to check C / C++ code style
+[1.652s] -- Configured uncrustify additional arguments: 
+[1.653s] -- Added test 'xmllint' to check XML markup files
+[1.654s] -- Configuring done
+[1.668s] -- Generating done
+[1.669s] -- Build files have been written to: /home/morita/ros2_ws/build/rasta
+[1.680s] Invoked command in '/home/morita/ros2_ws/build/rasta' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/morita/ros2_ws/src/rasta -DCMAKE_INSTALL_PREFIX=/home/morita/ros2_ws/install/rasta
+[1.681s] Invoking command in '/home/morita/ros2_ws/build/rasta': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/rasta -- -j8 -l8
+[1.726s] [ 50%] [32mBuilding CXX object CMakeFiles/rasta.dir/src/rasta.cpp.o[0m
+[4.946s] [01m[K/home/morita/ros2_ws/src/rasta/src/rasta.cpp:[m[K In function ‘[01m[Kvoid route_search(int*, int*, int*, int*, int**)[m[K’:
+[4.946s] [01m[K/home/morita/ros2_ws/src/rasta/src/rasta.cpp:723:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kcheck[m[K’ was not declared in this scope
+[4.946s]   723 |         delete[] [01;31m[Kcheck[m[K;
+[4.946s]       |                  [01;31m[K^~~~~[m[K
+[4.948s] [01m[K/home/morita/ros2_ws/src/rasta/src/rasta.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[4.948s] [01m[K/home/morita/ros2_ws/src/rasta/src/rasta.cpp:737:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kend_point[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.948s]   737 |         int [01;35m[Kend_point[m[K[NUM][XY];
+[4.948s]       |             [01;35m[K^~~~~~~~~[m[K
+[5.790s] gmake[2]: *** [CMakeFiles/rasta.dir/build.make:76: CMakeFiles/rasta.dir/src/rasta.cpp.o] Error 1
+[5.790s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/rasta.dir/all] Error 2
+[5.790s] gmake: *** [Makefile:146: all] Error 2
+[5.792s] Invoked command in '/home/morita/ros2_ws/build/rasta' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/rasta -- -j8 -l8

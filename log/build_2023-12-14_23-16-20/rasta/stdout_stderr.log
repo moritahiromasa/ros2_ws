@@ -1,0 +1,13 @@
+[35m[1mConsolidate compiler generated dependencies of target rasta[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/rasta.dir/src/rasta.cpp.o[0m
+[01m[K/home/morita/ros2_ws/src/rasta/src/rasta.cpp:[m[K In function ‘[01m[Kvoid route_search(int*, int*, int*, int*, int**)[m[K’:
+[01m[K/home/morita/ros2_ws/src/rasta/src/rasta.cpp:723:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kcheck[m[K’ was not declared in this scope
+  723 |         delete[] [01;31m[Kcheck[m[K;
+      |                  [01;31m[K^~~~~[m[K
+[01m[K/home/morita/ros2_ws/src/rasta/src/rasta.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/morita/ros2_ws/src/rasta/src/rasta.cpp:737:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kend_point[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  737 |         int [01;35m[Kend_point[m[K[NUM][XY];
+      |             [01;35m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/rasta.dir/build.make:76: CMakeFiles/rasta.dir/src/rasta.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/rasta.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target rasta[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/rasta.dir/src/rasta.cpp.o[0m
+[100%] [32m[1mLinking CXX executable rasta[0m
+[100%] Built target rasta
+-- Install configuration: ""
+-- Installing: /home/morita/ros2_ws/install/rasta/lib/rasta/rasta
+-- Set runtime path of "/home/morita/ros2_ws/install/rasta/lib/rasta/rasta" to ""
+-- Installing: /home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/package_run_dependencies/rasta
+-- Installing: /home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/parent_prefix_path/rasta
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/environment/ament_prefix_path.sh
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/environment/ament_prefix_path.dsv
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/environment/path.sh
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/environment/path.dsv
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.bash
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.sh
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.zsh
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.dsv
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/package.dsv
+-- Installing: /home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/packages/rasta
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/cmake/rastaConfig.cmake
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/cmake/rastaConfig-version.cmake
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/package.xml

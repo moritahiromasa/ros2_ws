@@ -1,0 +1,12 @@
+[35m[1mConsolidate compiler generated dependencies of target mypkg[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/mypkg.dir/src/mypkg.cpp.o[0m
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K In function ‘[01m[Kvoid route_search(int*, int*, int*, int*, int*, int (*)[2], int*, int**)[m[K’:
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:722:49:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+  722 |         cout << "(x, y)= " << start_point[0] << [01;31m[K,[m[K << start_point[1]<< endl;
+      |                                                 [01;31m[K^[m[K
+[01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:722:51:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K<<[m[K’ token
+  722 |         cout << "(x, y)= " << start_point[0] << , [01;31m[K<<[m[K start_point[1]<< endl;
+      |                                                   [01;31m[K^~[m[K
+gmake[2]: *** [CMakeFiles/mypkg.dir/build.make:76: CMakeFiles/mypkg.dir/src/mypkg.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mypkg.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
