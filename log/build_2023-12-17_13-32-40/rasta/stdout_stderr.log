@@ -1,0 +1,19 @@
+[35m[1mConsolidate compiler generated dependencies of target rasta[0m
+[100%] Built target rasta
+-- Install configuration: ""
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/lib/rasta/rasta
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/package_run_dependencies/rasta
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/parent_prefix_path/rasta
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/environment/ament_prefix_path.sh
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/environment/path.sh
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/environment/path.dsv
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.bash
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.sh
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.zsh
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.dsv
+-- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/package.dsv
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/packages/rasta
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/cmake/rastaConfig.cmake
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/cmake/rastaConfig-version.cmake
+-- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/package.xml

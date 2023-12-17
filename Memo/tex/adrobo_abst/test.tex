@@ -321,8 +321,22 @@ $$
 
 	
 	\subsection{エッジ抽出の選定}
+	
+	線の画素がどれだけ残っているのか、途切れていないかを比較するために、ガウシアンラプラシアン後に細線化したものと、Cannyのエッジ検出アルゴリズムでエッジ検出したもので比較を行う.
+	比較方法は求めた経路をGifでアニメーション化したときの画像の枚数で比較する.
 
 
+    \begin{center}
+        \begin{figure}[h]
+            \includegraphics[width=0.45\textwidth]{/home/morita/ros2_ws/output/Canny_Laplacian_8U_k5.png}
+            \caption{Cannyとガウシアンラプラシアン細線化との比較}
+            \label{CannyVSGaussianLaplacian}
+        \end{figure}
+    \end{center}
+	
+
+	ガウシアンラプラシアン+細線化はoo枚であった.
+	それに対して、Cannyはoo枚であった.
 
 	\subsection{経路の求める方法}
 

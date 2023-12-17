@@ -1,0 +1,11 @@
+[0.173s] Invoking command in '/home/morita/ros2_ws/build/mypkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/mypkg -- -j8 -l8
+[0.263s] [35m[1mConsolidate compiler generated dependencies of target mypkg[0m
+[0.390s] [ 50%] [32mBuilding CXX object CMakeFiles/mypkg.dir/src/mypkg.cpp.o[0m
+[3.878s] [01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[3.878s] [01m[K/home/morita/ros2_ws/src/mypkg/src/mypkg.cpp:885:58:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kimg[m[K’ in ‘[01m[K"/home/morita/ros2_ws/output/canny.jpg"[m[K’, which is of non-class type ‘[01m[Kconst char [38][m[K’
+[3.878s]   885 |         imwrite("/home/morita/ros2_ws/output/canny.jpg". [01;31m[Kimg[m[K);
+[3.878s]       |                                                          [01;31m[K^~~[m[K
+[4.720s] gmake[2]: *** [CMakeFiles/mypkg.dir/build.make:76: CMakeFiles/mypkg.dir/src/mypkg.cpp.o] Error 1
+[4.720s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mypkg.dir/all] Error 2
+[4.720s] gmake: *** [Makefile:146: all] Error 2
+[4.722s] Invoked command in '/home/morita/ros2_ws/build/mypkg' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/mypkg -- -j8 -l8

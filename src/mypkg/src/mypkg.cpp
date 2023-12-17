@@ -882,6 +882,7 @@ int main(int argc, char** argv){
 		cerr << "ERROR:Imge file not found." << endl;
 
 	img = Img_Resize(img);
+	imwrite("/home/morita/ros2_ws/output/canny.jpg", img);
 	
 	::width = img.cols; //  x
 	::height = img.rows; // y
