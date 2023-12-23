@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.11.30)  23 DEC 2023 11:35
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.11.30)  23 DEC 2023 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -227,39 +227,47 @@ Package amsmath Warning: Cannot use `split' here;
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 140.
 
-[5]) (./004proposal.tex [6]
+[5]
+File: /home/morita/ros2_ws/Memo/tex/img/001.png Graphic file (type bmp)
+</home/morita/ros2_ws/Memo/tex/img/001.png>
+) [6] (./004proposal.tex [7]
 第 4 章
-) (./005experiment.tex [7
-
-]
-第 5 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 11.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 11.
-) (./006conclusion.tex [8
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 10.
+File: /home/morita/ros2_ws/Memo/tex/img/003.png Graphic file (type bmp)
+</home/morita/ros2_ws/Memo/tex/img/003.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8
+
+]) (./005experiment.tex [9]
+第 5 章
+) (./006conclusion.tex [10
 
 ]
 第 6 章
-) [9
+) [11
 
 ] (./ack.tex) (./bib.tex
 \oldbaselineskip=\skip57
- [10
+ [12
 
 
 ])
 \c@pageback=\count279
- [11
+ [13
 
 ] (./00Afuroku.tex) (./000main.aux) ) 
 Here is how much of TeX's memory you used:
- 2008 strings out of 479850
- 30891 string characters out of 5887377
+ 2027 strings out of 479850
+ 31501 string characters out of 5887377
  346011 words of memory out of 5000000
- 20306 multiletter control sequences out of 15000+600000
+ 20319 multiletter control sequences out of 15000+600000
  485762 words of font info for 91 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 55i,26n,62p,536b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,26n,62p,536b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 000main.dvi (16 pages, 22868 bytes).
+Output written on 000main.dvi (18 pages, 30536 bytes).

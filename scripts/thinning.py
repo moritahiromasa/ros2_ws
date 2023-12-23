@@ -44,7 +44,7 @@ laplacian_32F_k5 = cv2.convertScaleAbs(laplacian_32F_k5)
 
 
 # 細線化(スケルトン化) THINNING_ZHANGSUEN
-skeleton1 = cv2.ximgproc.thinning(laplacian_32F_k5, thinningType=cv2.ximgproc.THINNING_ZHANGSUEN)
+skeleton1 = cv2.ximgproc.thinning(laplacian_8U_k5, thinningType=cv2.ximgproc.THINNING_ZHANGSUEN)
 cv2.imwrite('/home/morita/ros2_ws/output/thinning_zhangsuen.jpg', skeleton1)
 cv2.imwrite('/home/morita/ros2_ws/output/canny.jpg', canny_edges)
 
@@ -54,9 +54,11 @@ cv2.imwrite('/home/morita/ros2_ws/output/canny.jpg', canny_edges)
 #cv2.imwrite('/home/morita/ros2_ws/output/thinning_ghouhall.jpg', skeleton2)
 	
 
-plt.subplot(121),plt.imshow(canny_edges, cmap='gray')
+plt.subplot(131),plt.imshow(img, cmap='gray')
+plt.title('Original'), plt.xticks([]), plt.yticks([])
+plt.subplot(132),plt.imshow(canny_edges, cmap='gray')
 plt.title('Canny Edge'), plt.xticks([]), plt.yticks([])
-plt.subplot(122),plt.imshow(skeleton1, cmap='gray')
-plt.title('Gaussian Laplacian thinning'), plt.xticks([]), plt.yticks([])
+plt.subplot(133),plt.imshow(skeleton1, cmap='gray')
+plt.title('Laplacian thinning'), plt.xticks([]), plt.yticks([])
 
 plt.show()
