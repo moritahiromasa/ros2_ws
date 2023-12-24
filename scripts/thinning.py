@@ -5,8 +5,10 @@ from matplotlib import pyplot as plt
 
 
 # 入力画像の取得
+img1 = cv2.imread('/home/morita/ros2_ws/image/portrait7.jpg')
 img = cv2.imread('/home/morita/ros2_ws/image/portrait7.jpg', cv2.IMREAD_GRAYSCALE)
 
+img1 = cv2.cvtColor(img1, cv2.COLOR_RGB2BGR)
 
 ### Canny  ###
 med_val = np.median(img)
@@ -54,7 +56,7 @@ cv2.imwrite('/home/morita/ros2_ws/output/canny.jpg', canny_edges)
 #cv2.imwrite('/home/morita/ros2_ws/output/thinning_ghouhall.jpg', skeleton2)
 	
 
-plt.subplot(131),plt.imshow(img, cmap='gray')
+plt.subplot(131),plt.imshow(img1)
 plt.title('Original'), plt.xticks([]), plt.yticks([])
 plt.subplot(132),plt.imshow(canny_edges, cmap='gray')
 plt.title('Canny Edge'), plt.xticks([]), plt.yticks([])

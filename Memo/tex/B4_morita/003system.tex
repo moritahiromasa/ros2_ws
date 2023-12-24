@@ -6,8 +6,15 @@
  	ロボットの機体はAdeeptのADA031を用いている. Arduinoで動作するため、画像処理の難易度が高い. そこでメインボードをRaspberry Piに代え、それとロボットアームの各servoモータを接続するためにブレッドボードやジャンパー線、抵抗を用いて改良を行った.
   \section{ロボットの機構}
   	\label{chap:mechanism}
-	本研究で用いるロボットは3軸のマニピュレータロボットである. servo1を原点とし、各servoの回転角度を$\theta_1, \theta_2, \theta_3$、各リンクの長さを$l_1, l_2, l_3, l_4$とする.
-  
+	本研究で用いるロボットは3軸のマニピュレータロボットである. servo1を原点とし、各servoの回転角度を$\theta_1, \theta_2, \theta_3$、各リンクの長さを$l_1, l_2, l_3, l_4$とする. 図3.1はリンク座標系の定義と、実機の様子を示したものである.
+		 \begin{center}
+        \begin{figure}[h]
+            \includegraphics[width=1.0\textwidth]{/home/morita/ros2_ws/Memo/tex/img/002.png}
+            \caption{リンク座標系(仮)}
+            \label{test}
+        \end{figure}
+    \end{center}
+
   \section{手先の位置と回転角の関係}
   	\label{chap:kinetic}
 	リンク座標系に定義した各パラメータと、順運動学と逆運動学を用いて手先の位置から回転角を求める. またDH(Denavit-Hartenberg)記法を用いて、各リンクの関係を示す.
