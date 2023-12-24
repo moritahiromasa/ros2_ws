@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.11.30)  24 DEC 2023 13:49
+This is e-pTeX, Version 3.141592653-p3.9.1-210218-2.6 (utf8.euc) (TeX Live 2022/dev/Debian) (preloaded format=platex 2023.11.30)  25 DEC 2023 02:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -322,18 +322,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 \c@pageback=\count283
  [16
 
-] (./00Afuroku.tex) (./000main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./00Afuroku.tex) (./000main.aux) ) 
 Here is how much of TeX's memory you used:
- 3181 strings out of 479850
- 49505 string characters out of 5887377
+ 3182 strings out of 479850
+ 49508 string characters out of 5887377
  358845 words of memory out of 5000000
- 21441 multiletter control sequences out of 15000+600000
+ 21442 multiletter control sequences out of 15000+600000
  486997 words of font info for 97 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  68i,26n,76p,515b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 000main.dvi (21 pages, 33100 bytes).
+Output written on 000main.dvi (21 pages, 33592 bytes).
