@@ -17,8 +17,8 @@
 \contentsline {subsection}{\numberline {4.2.2}端点の検出と線の辿り方}{11}{}%
 \contentsline {chapter}{\numberline {第5章}実験}{12}{}%
 \contentsline {section}{\numberline {5.1}概要}{12}{}%
-\contentsline {section}{\numberline {5.2}比較手法}{12}{}%
-\contentsline {subsection}{\numberline {5.2.1}ラスタスキャン}{12}{}%
-\contentsline {subsection}{\numberline {5.2.2}領域と端点を用いた方法}{12}{}%
-\contentsline {chapter}{\numberline {第6章}結論}{13}{}%
-\contentsline {chapter}{謝辞}{14}{}%
+\contentsline {subsection}{\numberline {5.1.1}ラスタスキャン}{12}{}%
+\contentsline {chapter}{\numberline {第6章}結果}{13}{}%
+\contentsline {section}{\numberline {6.1}描画の結果}{13}{}%
+\contentsline {chapter}{\numberline {第7章}結論}{14}{}%
+\contentsline {chapter}{謝辞}{15}{}%
