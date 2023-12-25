@@ -34,3 +34,8 @@ convert -delay 5 -loop 0 frame_*.png movie.gif
 
 Shoteellのインストール
 https://ubunlog.com/ja/shotwell-0-32-0-llega-con-mejoras-de-soporte-reconocimiento-y-mas/
+
+
+# jupyternoteのインストール
+https://zenn.dev/kyami/articles/6044f972580702
+
