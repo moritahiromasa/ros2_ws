@@ -676,7 +676,7 @@ void isolate_point(int p[9], int** binaryImg){
 }
 
 int xy_rotate(int xy){
-	return xy + 74;
+	return xy + 85;
 }
 
 Mat Img_Resize(Mat img){
