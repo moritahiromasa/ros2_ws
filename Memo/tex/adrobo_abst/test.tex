@@ -23,9 +23,9 @@
     
     \makeatother
     
-    \abstract{In this study, we examined how to draw and made robot that draw like people. This robot starts to draw from the head on the left side. For that, we prepare a region and detect end points of edges. The reson is because in the case of right handed, it found me to start to draw from on the left side.}
+    \abstract{In the conventional study of the drawing robot, it is focused on the generated quality. However, we found the studies few, about the drawing order. In this study, we will consider how to draw like human.}
     
-    \keywords{Mechanical Engineering, Image Proceesing}
+    \keywords{Mechanical Engineering, Image Proceesing, Forward Kinematics, Inverse Kinematics}
     
     \maketitle
     
@@ -39,10 +39,8 @@
     \section{目的}
     
 	描画ロボットの研究において、シンプルにエッジ抽出から人物画を描く文献\cite{1}や、エッジ抽出とハッチングから芸術的な人物画を鉛筆で描く文献\cite{2}、リモートユーザがタブレットを介してロボットに描かせる文献\cite{3}などが存在する.
-	これらの研究では模写や芸術的な表現が可能になっているが、人のような描き方を追求したものが少ないと感じた.
-	そこで本研究ではある画家が描いた頭部作品の画像から描き順ができるだけ人に近い描き方をする描画ロボットを作成する.
-	頭部は表情から絵に様々な意味を連想させたり、静止した一場面にストーリーをもたらしたりする魅力がある.
-	また、背景などの他の要素をより際立たさせることもできる.
+	これらの研究では模写や芸術的な表現が可能になっているが、人のような描き方を考慮した文献が少ないと感じた.
+	そこで本研究ではある画家が描いた頭部作品の画像から線画を描く. その線画の描き順ができるだけ人に近くなるようにペン先を軌道させる.
     
     \section{システム構成}
 	
@@ -58,7 +56,7 @@
 
     \begin{center}
         \begin{figure}[h]
-            \includegraphics[width=0.5\textwidth]{/home/morita/ros2_ws/Memo/tex/img/Figure_1.png}
+            \includegraphics[width=0.5\textwidth]{/home/morita/ros2_ws/Memo/tex/img/002.png}
             \caption{リンク座標と各パラメータ(仮)}
             \label{manipulator}
         \end{figure}
@@ -120,7 +118,7 @@
 
     \begin{center}
         \begin{figure}[h]
-            \includegraphics[width=0.45\textwidth]{/home/morita/ros2_ws/output/rectangle0709.png}
+            \includegraphics[width=0.45\textwidth]{/home/morita/ros2_ws/output/003.png}
             \caption{領域の位置の確認}
             \label{the position of a region}
         \end{figure}
@@ -140,11 +138,12 @@
 
 	\section{実験}
 
-	経路の求めるためにラスタスキャンと領域、端点を用いた方法のどちらが人のような描き方に近いかを比較し.
+	経路の求めるためにラスタスキャンと領域、端点を用いた方法のどちらが人のような描き方に近いかを比較し、oo人にアンケートを取った.
 
-    
 	\section{結果}
-    
+	
+	アンケートから、ooの方が人のように近いという結果が出た.
+
 	\section{結\hspace{2zw}言}%===========================
    
 
