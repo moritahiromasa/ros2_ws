@@ -9,7 +9,7 @@
 	本研究で用いるロボットは3軸のマニピュレータロボットである. servo1を原点とし、各servoの回転角度を$\theta_1, \theta_2, \theta_3$、各リンクの長さを$l_1, l_2, l_3, l_4$とする. 図3.1はリンク座標系の定義と、実機の様子を示したものである.
 		 \begin{center}
         \begin{figure}[h]
-            \includegraphics[width=1.0\textwidth]{/home/morita/ros2_ws/Memo/tex/img/002.png}
+            \includegraphics[width=1.0\textwidth]{./img/002.png}
             \caption{リンク座標系(仮)}
             \label{test}
         \end{figure}
@@ -35,12 +35,10 @@
 	\end{equation}
 	ただし、
 	\begin{equation*}
-		\left(
 		\begin{split}
 			C_{23} = cos\theta_2cos\theta_3-sin\theta_2sin\theta_3\\
 			S_{23} = sin\theta_2cos\theta_3+cos\theta_2sin\theta_3
 		\end{split}
-		\right)
 	\end{equation*}
     また、手先ベクトルが以下のように求まる.
 	\begin{equation}
@@ -131,9 +129,9 @@
 	\begin{equation}
 			\begin{array}{c}
 			\begin{split}
-				& x = C_1(l_4C_{23} + l_3S_{23} + l_2S_2) \\
-				& y = S_1(l_4C_{23} + l_3S_{23} + l_2S_2) \\
-				& z - l_1 = -l_4S_{23} + l_3C_{23} + l_2C_2 \\
+				x &=& C_1(l_4C_{23} + l_3S_{23} + l_2S_2) \\
+				y &=& S_1(l_4C_{23} + l_3S_{23} + l_2S_2) \\
+				z - l_1 &=& -l_4S_{23} + l_3C_{23} + l_2C_2
 			\end{split}
 		\end{array}
 	\end{equation}
@@ -151,7 +149,7 @@
 	描く対象の絵は、ウィリアム・ブーグローという画家の''若い女の横顔``という作品の画像を用いる. 理由は背景が白でシンプルであるため、画像の読み込む際にノイズが少なく綺麗にエッジ抽出を行えるを考えたからである. この画像からエッジ抽出を行い、線画を生成する. エッジ抽出にはOpenCVのCannyのエッジ検出アルゴリズムとガウシアンラプラシアンに細線化を行ったものの２つを比較し、Cannyを使うことに決めた. 以下のそれぞれのエッジ抽出の結果を示す. 
 	 \begin{center}
         \begin{figure}[h]
-            \includegraphics[width=1.0\textwidth]{/home/morita/ros2_ws/Memo/tex/img/001.png}
+            \includegraphics[width=1.0\textwidth]{./img/001.png}
             \caption{エッジ抽出}
             \label{manipulator}
         \end{figure}
