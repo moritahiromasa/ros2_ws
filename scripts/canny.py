@@ -4,6 +4,10 @@ from matplotlib import pyplot as plt
 
 
 img = cv2.imread('/home/morita/ros2_ws/image/portrait7.jpg',0)
+img1 = cv2.imread('/home/morita/ros2_ws/image/portrait7.jpg',3)
+
+img1 = cv2.cvtColor(img1, cv2.COLOR_RGB2BGR)
+
 
 height, width = img.shape[:2] # 画像の縦横サイズを取得
 
@@ -36,9 +40,11 @@ _, gray = cv2.threshold(padding_img, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU
 cv2.imwrite('/home/morita/ros2_ws/output/canny.jpg', edges)
 
 
-plt.subplot(121),plt.imshow(img,cmap = 'gray')
+plt.subplot(131),plt.imshow(img1,)
 plt.title('Original Image'), plt.xticks([]), plt.yticks([])
-plt.subplot(122),plt.imshow(edges,cmap = 'gray')
+plt.subplot(132),plt.imshow(img,cmap = 'gray')
+plt.title('Grayscale Image'), plt.xticks([]), plt.yticks([])
+plt.subplot(133),plt.imshow(edges,cmap = 'gray')
 plt.title('Edge Image'), plt.xticks([]), plt.yticks([])
 
 
