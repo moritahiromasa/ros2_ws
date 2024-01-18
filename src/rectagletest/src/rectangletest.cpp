@@ -34,7 +34,7 @@ int main(int argc, char** argv){
 	int y = img.rows / 3;
 	
 	// 長方形を描画
-	rectangle(img, Point(x, y), Point(x + size, y + size), Scalar(0,0,255), 3);
+	rectangle(img, Point(x, y), Point(x + size, y + size), Scalar(0,0,255), 2);
 	
 	imwrite(output_file, img);
 

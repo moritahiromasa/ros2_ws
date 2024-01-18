@@ -3,8 +3,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-img = cv2.imread('/home/morita/ros2_ws/image/portrait3.jpg',0)
-img1 = cv2.imread('/home/morita/ros2_ws/image/portrait3.jpg',3)
+img = cv2.imread('/home/morita/ros2_ws/image/portrait7.jpg',0)
+img1 = cv2.imread('/home/morita/ros2_ws/image/portrait7.jpg',3)
 
 img1 = cv2.cvtColor(img1, cv2.COLOR_RGB2BGR)
 
