@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target rectangletest[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/rectangletest.dir/src/rectangletest.cpp.o[0m
+[100%] [32m[1mLinking CXX executable rectangletest[0m
+[100%] Built target rectangletest
+-- Install configuration: ""
+-- Installing: /home/morita/ros2_ws/install/rectagletest/lib/rectagletest/rectangletest
+-- Set runtime path of "/home/morita/ros2_ws/install/rectagletest/lib/rectagletest/rectangletest" to ""
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/ament_index/resource_index/package_run_dependencies/rectagletest
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/ament_index/resource_index/parent_prefix_path/rectagletest
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/environment/ament_prefix_path.sh
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/environment/path.sh
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/environment/path.dsv
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/local_setup.bash
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/local_setup.sh
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/local_setup.zsh
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/local_setup.dsv
+-- Installing: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/package.dsv
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/ament_index/resource_index/packages/rectagletest
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/cmake/rectagletestConfig.cmake
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/cmake/rectagletestConfig-version.cmake
+-- Up-to-date: /home/morita/ros2_ws/install/rectagletest/share/rectagletest/package.xml
