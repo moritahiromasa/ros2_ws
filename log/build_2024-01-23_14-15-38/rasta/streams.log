@@ -1,0 +1,22 @@
+[0.110s] Invoking command in '/home/morita/ros2_ws/build/rasta': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/rasta -- -j8 -l8
+[0.236s] [100%] Built target rasta
+[0.250s] Invoked command in '/home/morita/ros2_ws/build/rasta' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/morita/ros2_ws/build/rasta -- -j8 -l8
+[0.280s] Invoking command in '/home/morita/ros2_ws/build/rasta': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/morita/ros2_ws/build/rasta
+[0.287s] -- Install configuration: ""
+[0.289s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/lib/rasta/rasta
+[0.291s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/package_run_dependencies/rasta
+[0.294s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/parent_prefix_path/rasta
+[0.294s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/environment/ament_prefix_path.sh
+[0.294s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/environment/ament_prefix_path.dsv
+[0.294s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/environment/path.sh
+[0.294s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/environment/path.dsv
+[0.294s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.bash
+[0.294s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.sh
+[0.294s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.zsh
+[0.294s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/local_setup.dsv
+[0.295s] -- Installing: /home/morita/ros2_ws/install/rasta/share/rasta/package.dsv
+[0.295s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/ament_index/resource_index/packages/rasta
+[0.296s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/cmake/rastaConfig.cmake
+[0.296s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/cmake/rastaConfig-version.cmake
+[0.296s] -- Up-to-date: /home/morita/ros2_ws/install/rasta/share/rasta/package.xml
+[0.465s] Invoked command in '/home/morita/ros2_ws/build/rasta' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/morita/ros2_ws/build/rasta
