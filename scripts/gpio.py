@@ -94,13 +94,17 @@ def InverseKinematics():
 
 			# 各サーボの制御角度を求める
 			if z == 10:
-				time.sleep(2.0)
-			pi.set_servo_pulsewidth( SERVO_PIN_1, servo1_degree ) # SERVO1はtheta1に相当
-			time.sleep( 0.35 )
+				time.sleep(1.4)
+				pi.set_servo_pulsewidth( SERVO_PIN_1, servo1_degree ) # SERVO1はtheta1に相当
+				time.sleep(1.4)
+				pi.set_servo_pulsewidth( SERVO_PIN_3, servo3_degree ) # SERVO2はtheta2に相当
+				time.sleep(1.4)
+				pi.set_servo_pulsewidth( SERVO_PIN_2, servo2_degree ) # SERVO3はtheta3に相当
+			time.sleep( 0.5 )
 			pi.set_servo_pulsewidth( SERVO_PIN_3, servo3_degree ) # SERVO2はtheta2に相当
-			time.sleep( 0.35 )
+			time.sleep( 0.5 )
 			pi.set_servo_pulsewidth( SERVO_PIN_2, servo2_degree ) # SERVO3はtheta3に相当
-			time.sleep( 0.4 )
+			time.sleep( 0.5 )
 
 
 # main関数
